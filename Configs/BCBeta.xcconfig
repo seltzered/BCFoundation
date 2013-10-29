@@ -1,0 +1,8 @@
+// ------------------------------------------------------
+// Common settings for Beta targets
+// ------------------------------------------------------
+
+// Packaging
+
+INFOPLIST_FILE = InfoBeta.plist
+

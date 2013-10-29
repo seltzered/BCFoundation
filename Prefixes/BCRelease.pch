@@ -1,0 +1,5 @@
+//
+// Prefix header for all Mac-related source files
+//
+
+#import "../../Modules/ECLoggingShim/ECLogging/ECReleaseShim.h"

@@ -1,0 +1,12 @@
+//
+// Prefix header for all Mac-related source files
+//
+
+#if USE_ECLOGGING
+#import <ECLogging/ECLoggingDebug.pch>
+#ifdef __OBJC__
+#import <ECLogging/ECLogging.h>
+#endif
+#else
+#import "../../Modules/ECLoggingShim/ECLogging/ECDebugShim.h"
+#endif

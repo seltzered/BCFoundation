@@ -1,0 +1,35 @@
+// ------------------------------------------------------
+// Common settings for Release targets
+// ------------------------------------------------------
+
+#include "BCShared.xcconfig"
+
+// Deployment
+
+DEPLOYMENT_POSTPROCESSING = YES
+STRIP_INSTALLED_PRODUCT = YES
+
+
+// Build options
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+
+// Linking
+
+DEAD_CODE_STRIPPING = YES
+
+
+// Code Generation
+
+GCC_OPTIMIZATION_LEVEL = s
+
+
+// Language
+
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+
+
+// Legacy
+// (I think we probably don't need these anymore)
+ZERO_LINK = NO

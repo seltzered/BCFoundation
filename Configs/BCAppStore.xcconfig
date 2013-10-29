@@ -1,0 +1,7 @@
+// ------------------------------------------------------
+// Common settings for App Store targets
+// ------------------------------------------------------
+
+// Packaging
+
+INFOPLIST_FILE = Info.plist
