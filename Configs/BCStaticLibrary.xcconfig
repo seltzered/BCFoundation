@@ -1,0 +1,7 @@
+// ------------------------------------------------------
+// Common settings for Static Library targets
+// ------------------------------------------------------
+
+SKIP_INSTALL = YES
+OTHER_LDFLAGS = -ObjC -all_load
+
