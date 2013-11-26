@@ -4,26 +4,5 @@
 
 #import "BCShared.pch"
 #import <ECUnitTests/ECUnitTests.h>
-
-#if USE_NEW_UNIT_TESTS
-
 #import <XCTest/XCTest.h>
-#define BCTestCase XCTestCase
-
-#define BCTAssertNotNil XCTAssertNotNil
-#define BCTAssertNil XCTAssertNil
-#define BCTFail XCTFail
-#define BCTAssertTrue XCTAssertTrue
-#define BCTAssertEquals XCTAssertEqual
-
-#else
-#import <SenTestingKit/SenTestingKit.h>
-
-#define BCTAssertNotNil STAssertNotNil
-#define BCTAssertNil STAssertNil
-#define BCTFail STFail
-#define BCTAssertTrue STAssertTrue
-#define BCTAssertEquals STAssertEquals
-
-#define BCTestCase ECTestCase
 #endif
