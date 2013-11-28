@@ -1,0 +1,6 @@
+// ------------------------------------------------------
+// Common settings for Debug unit test targets
+// ------------------------------------------------------
+
+#include "BCDebug.xcconfig"
+#include "BCTests.xcconfig"

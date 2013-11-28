@@ -1,0 +1,6 @@
+// ------------------------------------------------------
+// Common settings for Release unit test targets
+// ------------------------------------------------------
+
+#include "BCRelease.xcconfig"
+#include "BCTests.xcconfig"

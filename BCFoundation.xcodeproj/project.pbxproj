@@ -21,6 +21,9 @@
 		22073BF418476195001DBAF9 /* BCRelease.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCRelease.pch; sourceTree = "<group>"; };
 		22073BF518476195001DBAF9 /* BCShared.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCShared.pch; sourceTree = "<group>"; };
 		22073BF618476195001DBAF9 /* BCTest.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCTest.pch; sourceTree = "<group>"; };
+		22073C1F18476FEE001DBAF9 /* BCTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCTests.xcconfig; sourceTree = "<group>"; };
+		22073C2018476FEE001DBAF9 /* BCTestsDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCTestsDebug.xcconfig; sourceTree = "<group>"; };
+		22073C2118476FEE001DBAF9 /* BCTestsRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCTestsRelease.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -34,6 +37,9 @@
 				22073BEC18476195001DBAF9 /* BCRelease.xcconfig */,
 				22073BED18476195001DBAF9 /* BCShared.xcconfig */,
 				22073BEE18476195001DBAF9 /* BCStaticLibrary.xcconfig */,
+				22073C1F18476FEE001DBAF9 /* BCTests.xcconfig */,
+				22073C2018476FEE001DBAF9 /* BCTestsDebug.xcconfig */,
+				22073C2118476FEE001DBAF9 /* BCTestsRelease.xcconfig */,
 			);
 			path = Configs;
 			sourceTree = SOURCE_ROOT;
