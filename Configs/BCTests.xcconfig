@@ -2,8 +2,6 @@
 // Common settings for unit test targets
 // ------------------------------------------------------
 
-#include "BCTests.xcconfig"
-
 WRAPPER_EXTENSION = xctest
 FRAMEWORK_SEARCH_PATHS = $(DEVELOPER_FRAMEWORKS_DIR) $(inherited)
 GCC_PREFIX_HEADER = Tests/$(TARGET_NAME)$(CONFIGURATION).pch
