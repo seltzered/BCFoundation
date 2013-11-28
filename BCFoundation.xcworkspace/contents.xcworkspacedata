@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Configs">
-   </FileRef>
-   <FileRef
-      location = "group:Prefixes">
+      location = "group:BCFoundation.xcodeproj">
    </FileRef>
 </Workspace>
