@@ -38,7 +38,7 @@ COPY_PHASE_STRIP = NO
 
 // Linking
 
-OTHER_LDFLAGS = -ObjC -all_load -lffi
+OTHER_LDFLAGS = -ObjC -lffi
 LD_RUNPATH_SEARCH_PATHS = @executable_path/../Frameworks
 
 

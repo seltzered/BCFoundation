@@ -3,5 +3,5 @@
 // ------------------------------------------------------
 
 SKIP_INSTALL = YES
-OTHER_LDFLAGS = -ObjC -all_load
+OTHER_LDFLAGS = -ObjC
 PUBLIC_HEADERS_FOLDER_PATH = include/$(PRODUCT_NAME)
