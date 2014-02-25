@@ -30,6 +30,7 @@ STRIP_INSTALLED_PRODUCT = NO
 // Linking
 
 DEAD_CODE_STRIPPING = NO
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
 
 // Code Generation
 
@@ -40,7 +41,7 @@ GCC_OPTIMIZATION_LEVEL = 0
 
 GCC_PRECOMPILE_PREFIX_HEADER = NO
 
-
 // Legacy
 // (I think we probably don't need these anymore)
 ZERO_LINK = YES
+

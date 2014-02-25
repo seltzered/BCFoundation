@@ -1,0 +1,10 @@
+// ------------------------------------------------------
+// Common settings for all targets
+// ------------------------------------------------------
+
+SDKROOT = iphoneos
+IPHONEOS_DEPLOYMENT_TARGET = 5.0
+
+UNIT_TEST_FRAMEWORK_PATH = $(SDKROOT)/Developer/Library/Frameworks
+
+OTHER_LDFLAGS = -ObjC

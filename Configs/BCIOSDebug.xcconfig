@@ -1,0 +1,2 @@
+#include "BCDebug.xcconfig"
+#include "BCIOSShared.xcconfig"

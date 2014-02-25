@@ -21,10 +21,8 @@ DEAD_CODE_STRIPPING = YES
 
 
 // Code Generation
-
 GCC_OPTIMIZATION_LEVEL = fast
 LLVM_LTO = YES
-GCC_FAST_MATH = YES
 GCC_UNROLL_LOOPS = YES
 LLVM_VECTORIZE_LOOPS = YES
 
@@ -39,3 +37,7 @@ GCC_PRECOMPILE_PREFIX_HEADER = YES
 // Legacy
 // (I think we probably don't need these anymore)
 ZERO_LINK = NO
+
+// Static analyser
+
+CLANG_STATIC_ANALYZER_MODE = deep

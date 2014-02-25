@@ -1,0 +1,2 @@
+#include "BCRelease.xcconfig"
+#include "BCIOSShared.xcconfig"
