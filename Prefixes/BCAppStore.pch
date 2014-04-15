@@ -4,6 +4,5 @@
 
 #define BC_DISTRIBUTION_APPSTORE 1
 #define BC_DISTRIBUTION_NONAPPSTORE 0
-#define BC_DISTRIBUTION_BETA 0
 
 #import "BCShared.pch"
