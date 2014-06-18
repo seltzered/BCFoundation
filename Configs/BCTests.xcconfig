@@ -3,7 +3,7 @@
 // ------------------------------------------------------
 
 WRAPPER_EXTENSION = xctest
-FRAMEWORK_SEARCH_PATHS = $(DEVELOPER_FRAMEWORKS_DIR) $(inherited)
+FRAMEWORK_SEARCH_PATHS = $(PLATFORM_DIR)/Developer/Library/Frameworks $(inherited)
 GCC_PREFIX_HEADER = Tests/$(TARGET_NAME)$(CONFIGURATION).pch
 SKIP_INSTALL = YES
 OTHER_LDFLAGS = -ObjC
