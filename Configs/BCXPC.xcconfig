@@ -1,0 +1,6 @@
+// ------------------------------------------------------
+// Common settings for XPC targets
+// ------------------------------------------------------
+
+MACH_O_TYPE = mh_execute
+WRAPPER_EXTENSION = xpc
