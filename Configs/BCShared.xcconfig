@@ -20,7 +20,7 @@ GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 
 
 // Code Signing
-CODE_SIGN_IDENTITY = Developer ID Application
+CODE_SIGN_IDENTITY = Developer ID Application: Bohemian Coding
 
 // Build Locations
 
