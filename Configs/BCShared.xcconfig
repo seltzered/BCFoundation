@@ -19,14 +19,6 @@ VALID_ARCHS = x86_64
 GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 
 
-// Code Signing
-CODE_SIGN_IDENTITY = Developer ID Application: Bohemian Coding
-
-// Build Locations
-
-//NORMAL_CONFIGURATION_BUILD_DIR = $(BUILD_DIR)/$(CONFIGURATION)
-//CONFIGURATION_BUILD_DIR = $(NORMAL_CONFIGURATION_BUILD_DIR)/$(TARGET_NAME)
-
 // Deployment
 
 COMBINE_HIDPI_IMAGES = YES
