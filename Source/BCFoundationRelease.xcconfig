@@ -1,0 +1,3 @@
+#include "../Configs/BCRelease.xcconfig"
+
+#include "BCFoundationShared.xcconfig"

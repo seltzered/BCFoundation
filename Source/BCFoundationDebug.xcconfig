@@ -1,0 +1,3 @@
+#include "../Configs/BCDebug.xcconfig"
+
+#include "BCFoundationShared.xcconfig"

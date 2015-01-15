@@ -1,0 +1,2 @@
+#include "../Configs/BCTestsRelease.xcconfig"
+#include "BCFoundationTestsShared.xcconfig"

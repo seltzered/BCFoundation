@@ -6,6 +6,26 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F57721E81A67F64900839649 /* BCFoo.h in Headers */ = {isa = PBXBuildFile; fileRef = F57721E71A67F64900839649 /* BCFoo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F57721EA1A67F64900839649 /* BCFoo.m in Sources */ = {isa = PBXBuildFile; fileRef = F57721E91A67F64900839649 /* BCFoo.m */; };
+		F57721F01A67F64900839649 /* libBCFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57721E51A67F64900839649 /* libBCFoundation.a */; };
+		F57721FD1A67F70100839649 /* BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F57721FC1A67F6F100839649 /* BCFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F577220C1A67FF1200839649 /* BCFoundationTestsShared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F57722091A67FF1200839649 /* BCFoundationTestsShared.xcconfig */; };
+		F577220D1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F577220A1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig */; };
+		F577220E1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F577220B1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F57721F11A67F64900839649 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5C25A8016A46702002F7A70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F57721E41A67F64900839649;
+			remoteInfo = BCFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		22073BE818476195001DBAF9 /* BCAppStore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCAppStore.xcconfig; sourceTree = "<group>"; };
 		22073BEA18476195001DBAF9 /* BCDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCDebug.xcconfig; sourceTree = "<group>"; };
@@ -26,7 +46,37 @@
 		22E0C15518BCD5BC006ED6C6 /* BCIOSDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSDebug.xcconfig; sourceTree = "<group>"; };
 		22E0C15618BCD5BC006ED6C6 /* BCIOSRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSRelease.xcconfig; sourceTree = "<group>"; };
 		22E0C15718BCD5BC006ED6C6 /* BCIOSShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSShared.xcconfig; sourceTree = "<group>"; };
+		F57721E51A67F64900839649 /* libBCFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBCFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F57721E71A67F64900839649 /* BCFoo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCFoo.h; sourceTree = "<group>"; };
+		F57721E91A67F64900839649 /* BCFoo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCFoo.m; sourceTree = "<group>"; };
+		F57721EF1A67F64900839649 /* BCFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F57721F51A67F64900839649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F57721FC1A67F6F100839649 /* BCFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BCFoundation.h; path = Source/BCFoundation.h; sourceTree = "<group>"; };
+		F57722061A67FF0400839649 /* BCFoundationDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BCFoundationDebug.xcconfig; sourceTree = "<group>"; };
+		F57722071A67FF0400839649 /* BCFoundationRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BCFoundationRelease.xcconfig; sourceTree = "<group>"; };
+		F57722081A67FF0400839649 /* BCFoundationShared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BCFoundationShared.xcconfig; sourceTree = "<group>"; };
+		F57722091A67FF1200839649 /* BCFoundationTestsShared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BCFoundationTestsShared.xcconfig; sourceTree = "<group>"; };
+		F577220A1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BCFoundationTestsDebug.xcconfig; sourceTree = "<group>"; };
+		F577220B1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BCFoundationTestsRelease.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F57721E21A67F64900839649 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F57721EC1A67F64900839649 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57721F01A67F64900839649 /* libBCFoundation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		22073BE718476195001DBAF9 /* Configs */ = {
@@ -62,9 +112,59 @@
 			path = Prefixes;
 			sourceTree = SOURCE_ROOT;
 		};
+		F57721E61A67F64900839649 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F57721E71A67F64900839649 /* BCFoo.h */,
+				F57721E91A67F64900839649 /* BCFoo.m */,
+				F577220F1A67FF1800839649 /* Configs */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F57721F31A67F64900839649 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F57721F41A67F64900839649 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F57721F41A67F64900839649 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F57722101A67FF3600839649 /* Configs */,
+				F57721F51A67F64900839649 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F577220F1A67FF1800839649 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				F57722061A67FF0400839649 /* BCFoundationDebug.xcconfig */,
+				F57722071A67FF0400839649 /* BCFoundationRelease.xcconfig */,
+				F57722081A67FF0400839649 /* BCFoundationShared.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		F57722101A67FF3600839649 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				F577220A1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig */,
+				F577220B1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig */,
+				F57722091A67FF1200839649 /* BCFoundationTestsShared.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
 		F5C25A7E16A46702002F7A70 = {
 			isa = PBXGroup;
 			children = (
+				F57721FC1A67F6F100839649 /* BCFoundation.h */,
+				F57721E61A67F64900839649 /* Source */,
+				F57721F31A67F64900839649 /* Tests */,
 				22073BE718476195001DBAF9 /* Configs */,
 				22073BEF18476195001DBAF9 /* Prefixes */,
 				F5C25A8A16A46702002F7A70 /* Products */,
@@ -76,11 +176,63 @@
 		F5C25A8A16A46702002F7A70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F57721E51A67F64900839649 /* libBCFoundation.a */,
+				F57721EF1A67F64900839649 /* BCFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F57721E31A67F64900839649 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57721FD1A67F70100839649 /* BCFoundation.h in Headers */,
+				F57721E81A67F64900839649 /* BCFoo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F57721E41A67F64900839649 /* BCFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F57721FA1A67F64900839649 /* Build configuration list for PBXNativeTarget "BCFoundation" */;
+			buildPhases = (
+				F57721E11A67F64900839649 /* Sources */,
+				F57721E21A67F64900839649 /* Frameworks */,
+				F57721E31A67F64900839649 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BCFoundation;
+			productName = BCFoundation;
+			productReference = F57721E51A67F64900839649 /* libBCFoundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F57721EE1A67F64900839649 /* BCFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F57721FB1A67F64900839649 /* Build configuration list for PBXNativeTarget "BCFoundationTests" */;
+			buildPhases = (
+				F57721EB1A67F64900839649 /* Sources */,
+				F57721EC1A67F64900839649 /* Frameworks */,
+				F57721ED1A67F64900839649 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F57721F21A67F64900839649 /* PBXTargetDependency */,
+			);
+			name = BCFoundationTests;
+			productName = BCFoundationTests;
+			productReference = F57721EF1A67F64900839649 /* BCFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F5C25A8016A46702002F7A70 /* Project object */ = {
@@ -88,6 +240,14 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Bohemian Coding";
+				TargetAttributes = {
+					F57721E41A67F64900839649 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F57721EE1A67F64900839649 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
 			};
 			buildConfigurationList = F5C25A8316A46702002F7A70 /* Build configuration list for PBXProject "BCFoundation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -101,11 +261,158 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				F57721E41A67F64900839649 /* BCFoundation */,
+				F57721EE1A67F64900839649 /* BCFoundationTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		F57721ED1A67F64900839649 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F577220E1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig in Resources */,
+				F577220D1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig in Resources */,
+				F577220C1A67FF1200839649 /* BCFoundationTestsShared.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F57721E11A67F64900839649 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57721EA1A67F64900839649 /* BCFoo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F57721EB1A67F64900839649 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F57721F21A67F64900839649 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F57721E41A67F64900839649 /* BCFoundation */;
+			targetProxy = F57721F11A67F64900839649 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F57721F61A67F64900839649 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F57722061A67FF0400839649 /* BCFoundationDebug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F57721F71A67F64900839649 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F57722071A67FF0400839649 /* BCFoundationRelease.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		F57721F81A67F64900839649 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F577220A1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BCFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F57721F91A67F64900839649 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F577220B1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BCFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		F5C25A9816A46702002F7A70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -121,6 +428,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F57721FA1A67F64900839649 /* Build configuration list for PBXNativeTarget "BCFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F57721F61A67F64900839649 /* Debug */,
+				F57721F71A67F64900839649 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F57721FB1A67F64900839649 /* Build configuration list for PBXNativeTarget "BCFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F57721F81A67F64900839649 /* Debug */,
+				F57721F91A67F64900839649 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F5C25A8316A46702002F7A70 /* Build configuration list for PBXProject "BCFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

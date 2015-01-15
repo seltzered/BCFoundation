@@ -1,0 +1,3 @@
+#include "../Source/BCFoundationShared.xcconfig"
+
+MODULEMAP_FILE = Source/module.modulemap
