@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F53200701A681E9100094228 /* BCGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F532006E1A681E9100094228 /* BCGeometry.m */; };
 		F53200711A681E9100094228 /* BCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F532006F1A681E9100094228 /* BCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F53200831A693F7B00094228 /* BCAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = F53200811A693F7B00094228 /* BCAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F53200841A693F7B00094228 /* BCAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = F53200821A693F7B00094228 /* BCAxis.m */; };
 		F57721F01A67F64900839649 /* libBCFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57721E51A67F64900839649 /* libBCFoundation.a */; };
 		F57721FD1A67F70100839649 /* BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F57721FC1A67F6F100839649 /* BCFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F577220C1A67FF1200839649 /* BCFoundationTestsShared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F57722091A67FF1200839649 /* BCFoundationTestsShared.xcconfig */; };
@@ -48,6 +50,8 @@
 		22E0C15718BCD5BC006ED6C6 /* BCIOSShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSShared.xcconfig; sourceTree = "<group>"; };
 		F532006E1A681E9100094228 /* BCGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCGeometry.m; path = ../BCGeometry.m; sourceTree = "<group>"; };
 		F532006F1A681E9100094228 /* BCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCGeometry.h; path = ../BCGeometry.h; sourceTree = "<group>"; };
+		F53200811A693F7B00094228 /* BCAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAxis.h; sourceTree = "<group>"; };
+		F53200821A693F7B00094228 /* BCAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAxis.m; sourceTree = "<group>"; };
 		F57721E51A67F64900839649 /* libBCFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBCFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57721EF1A67F64900839649 /* BCFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57721F51A67F64900839649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			children = (
 				F532006F1A681E9100094228 /* BCGeometry.h */,
 				F532006E1A681E9100094228 /* BCGeometry.m */,
+				F53200811A693F7B00094228 /* BCAxis.h */,
+				F53200821A693F7B00094228 /* BCAxis.m */,
 				F577220F1A67FF1800839649 /* Configs */,
 			);
 			path = Source;
@@ -189,6 +195,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53200831A693F7B00094228 /* BCAxis.h in Headers */,
 				F57721FD1A67F70100839649 /* BCFoundation.h in Headers */,
 				F53200711A681E9100094228 /* BCGeometry.h in Headers */,
 			);
@@ -286,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53200701A681E9100094228 /* BCGeometry.m in Sources */,
+				F53200841A693F7B00094228 /* BCAxis.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
