@@ -1,6 +1,7 @@
 //  Created by Pieter Omvlee on 15/01/2015.
 //  Copyright (c) 2015 Bohemian Coding. All rights reserved.
 
+#import <Foundation/Foundation.h>
 #import "BCGeometry.h"
 
 CGRect BCRectWithSizeProportionallyInRect(CGSize size, CGRect rect) {
@@ -206,8 +207,8 @@ BOOL BCRectIsZero(CGRect rect) {
   return CGRectEqualToRect(rect, NSZeroRect);
 }
 
-CGRect BCRectFromPoints(NSPoint point1, NSPoint point2) {
-  NSRect  r;
+CGRect BCRectFromPoints(CGPoint point1, CGPoint point2) {
+  CGRect  r;
   r.origin.x = MIN(point1.x, point2.x);
   r.origin.y = MIN(point1.y, point2.y);
   r.size.width = ABS(point2.x - point1.x);
@@ -215,8 +216,8 @@ CGRect BCRectFromPoints(NSPoint point1, NSPoint point2) {
   return r;
 }
 
-CGRect BCUnionRectSafe(NSRect r1, NSRect r2) {
-  NSRect r;
+CGRect BCUnionRectSafe(CGRect r1, CGRect r2) {
+  CGRect r;
   r.origin.x = MIN(CGRectGetMinX(r1), CGRectGetMinX(r2));
   r.origin.y = MIN(CGRectGetMinY(r1), CGRectGetMinY(r2));
   r.size.width = MAX(CGRectGetMaxX(r1), CGRectGetMaxX(r2)) - r.origin.x;
@@ -224,9 +225,9 @@ CGRect BCUnionRectSafe(NSRect r1, NSRect r2) {
   return r;
 }
 
-CGRect BCRectWithSizeProportionallyAroundRect(NSSize size, NSRect rect)
+CGRect BCRectWithSizeProportionallyAroundRect(CGSize size, CGRect rect)
 {
-  NSRect result = BCRectWithSizeProportionallyInRect(size, rect);
+  CGRect result = BCRectWithSizeProportionallyInRect(size, rect);
   if (NSWidth(result) < NSWidth(rect)) {
     CGFloat zoom = NSWidth(rect)/NSWidth(result);
     result = BCRectScale(result, zoom);
@@ -240,4 +241,106 @@ CGRect BCRectWithSizeProportionallyAroundRect(NSSize size, NSRect rect)
 
 CGFloat BCDistanceBetweenPoints(NSPoint p1, NSPoint p2) {
   return sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
+}
+
+#pragma mark - Trigonometry
+CGFloat BCSlopeBetweenPoints(CGPoint a, CGPoint b) {
+  return atan2(b.y - a.y, b.x - a.x);
+}
+
+CGFloat BCNormalizeRadians(CGFloat radians) {
+  while (radians > M_PI)
+    radians -= M_PI + M_PI;
+  while (radians < -M_PI)
+    radians += M_PI + M_PI;
+  return radians;
+}
+
+
+CGFloat BCSlopeToStraightAngles(CGFloat slope) {
+  if (slope > 0) {
+    for (NSInteger i = 1; i < 10; i += 2) {
+      if (slope < M_PI * i / 8)
+        return M_PI* (i - 1) / 8;
+    }
+  } else {
+    for (NSInteger i = 1; i < 10; i += 2) {
+      if (slope > -M_PI * i / 8)
+        return -M_PI * (i - 1) / 8;
+    }
+  }
+  return slope;
+}
+
+CGPoint BCPointBetweenPointsAt(NSPoint p1, NSPoint p2, CGFloat position) {
+  return CGPointMake(p1.x + (p2.x - p1.x) * position, p1.y + (p2.y - p1.y) * position);
+}
+
+CGPoint BCPointBetweenPoints(NSPoint p1, NSPoint p2) {
+  return CGPointMake((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
+}
+
+CGPoint BCPointAtDistanceAndSlopeFromPoint(CGFloat distance, CGFloat slope, CGPoint point) {
+  CGPoint p = CGPointZero;
+
+  CGAffineTransform t = CGAffineTransformIdentity;
+  t = CGAffineTransformRotate(t, slope);
+  t = CGAffineTransformMakeTranslation(distance, 0);
+
+  p = CGPointApplyAffineTransform(p, t);
+  p.x += point.x;
+  p.y += point.y;
+
+  return p;
+}
+
+CGPoint BCPointAlignStraightAngleToPoint(CGPoint p1, CGPoint p2) {
+  CGFloat slope = BCSlopeBetweenPoints(p2, p1);
+  CGFloat distance = BCDistanceBetweenPoints(p2, p1);
+  return BCPointAtDistanceAndSlopeFromPoint(distance, BCSlopeToStraightAngles(slope), p2);
+}
+
+CGPoint BCSnapPointToPointWithMargin(CGPoint p1, CGPoint p2, CGFloat margin) {
+  if (ABS(p1.x - p2.x) < margin)
+    p1.x = p2.x;
+  if (ABS(p1.y - p2.y) < margin)
+    p1.y = p2.y;
+  return p1;
+}
+
+CGFloat BCFloatMakeNotInfOrNan(CGFloat value) {
+  if (isinf(value) || isnan(value))
+    return 0.1;
+  else
+    return value;
+}
+
+CGFloat BCFloatValidValue(CGFloat value) {
+  value = BCFloatMakeNotInfOrNan(value);
+  if (value > 0)
+    return MAX(0.1, value);
+  else
+    return MIN(-0.1, value);
+}
+
+CGPoint BCPointSafe(CGPoint point) {
+  point.x = BCFloatMakeNotInfOrNan(point.x);
+  point.y = BCFloatMakeNotInfOrNan(point.y);
+  return point;
+}
+
+CGRect BCRectSafe(CGRect rect) {
+  rect.origin.x = BCFloatMakeNotInfOrNan(rect.origin.x);
+  rect.origin.y = BCFloatMakeNotInfOrNan(rect.origin.y);
+  rect.size.width = BCFloatValidValue(rect.size.width);
+  rect.size.height = BCFloatValidValue(rect.size.height);
+  return rect;
+}
+
+CGFloat BCRadiansToDegrees(CGFloat radians)  {
+  return radians * (180.0 / M_PI);
+}
+
+CGFloat BCDegreesToRadians(CGFloat degrees)  {
+  return degrees / (180.0 / M_PI);
 }
