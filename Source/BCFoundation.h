@@ -2,3 +2,4 @@
 //  Copyright (c) 2015 Bohemian Coding. All rights reserved.
 
 #import "BCFoo.h"
+#import "BCGeometry.h"
