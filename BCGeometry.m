@@ -285,7 +285,7 @@ CGPoint BCPointAtDistanceAndSlopeFromPoint(CGFloat distance, CGFloat slope, CGPo
 
   CGAffineTransform t = CGAffineTransformIdentity;
   t = CGAffineTransformRotate(t, slope);
-  t = CGAffineTransformMakeTranslation(distance, 0);
+  t = CGAffineTransformTranslate(t, distance, 0);
 
   p = CGPointApplyAffineTransform(p, t);
   p.x += point.x;
