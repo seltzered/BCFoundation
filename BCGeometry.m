@@ -29,6 +29,34 @@ CGRect BCRectWithSizeCenteredInRect(CGSize size, CGRect outer) {
   return r;
 }
 
+CGRect BCRectWithSize(CGSize size) {
+  return CGRectMake(0, 0, size.width, size.height);
+}
+
+CGRect BCRectWithOriginAndSize(CGPoint point, CGSize size) {
+  return CGRectMake(point.x, point.y, size.width, size.height);
+}
+
+
+CGRect BCRectWithMarginAroundPoint(CGFloat margin, CGPoint point) {
+  return CGRectMake(point.x - margin, point.y - margin, margin * 2, margin * 2);
+}
+
+CGRect BCRectWithSizeSizeCenteredAtPoint(CGSize size, CGPoint point) {
+  return CGRectMake(point.x - size.width/2, point.y - size.height/2, size.width, size.height);
+}
+
+BOOL BCRectFuzzyEqualToRect(CGRect r1, CGRect r2) {
+  return (ABS(r1.origin.x - r2.origin.x) < 0.001 &&
+          ABS(r1.origin.y - r2.origin.y) < 0.001 &&
+          ABS(r1.size.width - r2.size.width) < 0.001 &&
+          ABS(r1.size.height - r2.size.height) < 0.001);
+}
+
+CGRect BCRectFromCoordinateSpaceRectToRect(CGRect rect, CGRect fromRect, CGRect toRect) {
+  return BCRectAbsolute(BCRectRelative(rect, fromRect), toRect);
+}
+
 CGRect BCRectExpand(CGRect rect, CGFloat margin) {
   return CGRectMake(rect.origin.x- margin, rect.origin.y- margin, rect.size.width+ margin *2, rect.size.height+ margin *2);
 }
@@ -53,19 +81,12 @@ CGRect BCRectAbsolute(CGRect rect, CGRect outer) {
   return rect;
 }
 
-CGRect BCRectWithMarginAroundPoint(CGFloat margin, CGPoint point) {
-  return CGRectMake(point.x - margin, point.y - margin, margin * 2, margin * 2);
-}
-
-CGRect BCRectWithSizeSizeCenteredAtPoint(CGSize size, CGPoint point) {
-  return CGRectMake(point.x - size.width/2, point.y - size.height/2, size.width, size.height);
-}
-
-BOOL BCRectFuzzyEqualToRect(CGRect r1, CGRect r2) {
-  return (ABS(r1.origin.x - r2.origin.x) < 0.001 &&
-          ABS(r1.origin.y - r2.origin.y) < 0.001 &&
-          ABS(r1.size.width - r2.size.width) < 0.001 &&
-          ABS(r1.size.height - r2.size.height) < 0.001);
+CGRect BCRectScale(CGRect r, CGFloat scale) {
+  r.origin.x    *= scale;
+  r.origin.y    *= scale;
+  r.size.width  *= scale;
+  r.size.height *= scale;
+  return r;
 }
 
 #pragma mark - Points
@@ -110,6 +131,18 @@ CGSize BCOffsetBetweenPoints(CGPoint point1, NSPoint point2) {
 
 CGPoint BCPointWithOffset(CGPoint point, CGSize offset) {
   return CGPointMake(point.x+offset.width, point.y+offset.height);
+}
+
+CGPoint BCPointFromCoordinateSpaceRectToRect(CGPoint point, CGRect fromRect, CGRect toRect) {
+  return BCPointAbsolute(BCPointRelative(point, fromRect), toRect);
+}
+
+#pragma mark - Sizes
+
+CGSize BCSizeScale(CGSize s, CGFloat scale) {
+  s.width  *= scale;
+  s.height *= scale;
+  return s;
 }
 
 #pragma mark - Corners
@@ -162,10 +195,49 @@ CGSize BCSizeFromPoint(CGPoint point) {
   return CGSizeMake(point.x, point.y);
 }
 
-CGRect BCRectFromSize(CGSize size) {
-  return CGRectMake(0, 0, size.width, size.height);
+
+#pragma mark -
+
+BOOL BCPointsEqualWithMargin(CGPoint p1, CGPoint p2, CGFloat margin) {
+  return BCDistanceBetweenPoints(p1, p2) < margin;
 }
 
-CGRect BCRectFromOriginAndSize(CGPoint point, CGSize size) {
-  return CGRectMake(point.x, point.y, size.width, size.height);
+BOOL BCRectIsZero(CGRect rect) {
+  return CGRectEqualToRect(rect, NSZeroRect);
+}
+
+CGRect BCRectFromPoints(NSPoint point1, NSPoint point2) {
+  NSRect  r;
+  r.origin.x = MIN(point1.x, point2.x);
+  r.origin.y = MIN(point1.y, point2.y);
+  r.size.width = ABS(point2.x - point1.x);
+  r.size.height = ABS(point2.y - point1.y);
+  return r;
+}
+
+CGRect BCUnionRectSafe(NSRect r1, NSRect r2) {
+  NSRect r;
+  r.origin.x = MIN(CGRectGetMinX(r1), CGRectGetMinX(r2));
+  r.origin.y = MIN(CGRectGetMinY(r1), CGRectGetMinY(r2));
+  r.size.width = MAX(CGRectGetMaxX(r1), CGRectGetMaxX(r2)) - r.origin.x;
+  r.size.height = MAX(CGRectGetMaxY(r1), CGRectGetMaxY(r2)) - r.origin.y;
+  return r;
+}
+
+CGRect BCRectWithSizeProportionallyAroundRect(NSSize size, NSRect rect)
+{
+  NSRect result = BCRectWithSizeProportionallyInRect(size, rect);
+  if (NSWidth(result) < NSWidth(rect)) {
+    CGFloat zoom = NSWidth(rect)/NSWidth(result);
+    result = BCRectScale(result, zoom);
+  }
+  if (NSHeight(result) < NSHeight(rect)) {
+    CGFloat zoom = NSHeight(rect)/NSHeight(result);
+    result = BCRectScale(result, zoom);
+  }
+  return BCRectWithSizeCenteredInRect(result.size, rect);
+}
+
+CGFloat BCDistanceBetweenPoints(NSPoint p1, NSPoint p2) {
+  return sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
 }
