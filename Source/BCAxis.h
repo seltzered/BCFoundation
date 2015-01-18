@@ -12,5 +12,11 @@ BCAxis BCAxisFlip(BCAxis axis);
 CGFloat GKRectMinForAxis(CGRect rect, BCAxis axis);
 CGFloat GKRectMaxForAxis(CGRect rect, BCAxis axis);
 CGFloat GKRectSizeForAxis(CGRect rect, BCAxis axis);
+
+CGRect GKRectWithSizeForAxis(CGRect rect, CGFloat value, BCAxis axis);
+CGRect GKRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis);
+CGRect GKRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis);
+
 CGFloat GKPointPositionForAxis(CGPoint point, BCAxis axis);
 CGPoint GKPointWithPositionForAxis(CGPoint point, BCAxis axis, CGFloat value);
+
