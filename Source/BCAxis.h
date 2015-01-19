@@ -17,6 +17,8 @@ CGRect GKRectWithSizeForAxis(CGRect rect, CGFloat value, BCAxis axis);
 CGRect GKRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis);
 CGRect GKRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis);
 
+CGRect GKRectWithMidX(CGRect rect, CGFloat midX);
+CGRect GKRectWithMidY(CGRect rect, CGFloat midY);
+
 CGFloat GKPointPositionForAxis(CGPoint point, BCAxis axis);
 CGPoint GKPointWithPositionForAxis(CGPoint point, BCAxis axis, CGFloat value);
-

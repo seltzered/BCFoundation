@@ -43,6 +43,18 @@ CGRect GKRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis) {
   return rect;
 }
 
+CGRect GKRectWithMidX(CGRect rect, CGFloat midX) {
+  rect.origin.x = midX - rect.size.width/2;
+  return rect;
+}
+
+CGRect GKRectWithMidY(CGRect rect, CGFloat midY) {
+  rect.origin.y = midY - rect.size.height/2;
+  return rect;
+}
+
+#pragma mark - Points
+
 CGFloat GKPointPositionForAxis(CGPoint point, BCAxis axis) {
   if (axis == BCAxisHorizontal)
     return point.x;
