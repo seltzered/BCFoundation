@@ -62,7 +62,7 @@ CGFloat GKPointPositionForAxis(CGPoint point, BCAxis axis) {
     return point.y;
 }
 
-CGPoint GKPointWithPositionForAxis(CGPoint point, BCAxis axis, CGFloat value) {
+CGPoint GKPointWithPositionForAxis(CGPoint point, CGFloat value, BCAxis axis) {
   if (axis == BCAxisHorizontal)
     point.x = value;
   else

@@ -21,4 +21,4 @@ CGRect GKRectWithMidX(CGRect rect, CGFloat midX);
 CGRect GKRectWithMidY(CGRect rect, CGFloat midY);
 
 CGFloat GKPointPositionForAxis(CGPoint point, BCAxis axis);
-CGPoint GKPointWithPositionForAxis(CGPoint point, BCAxis axis, CGFloat value);
+CGPoint GKPointWithPositionForAxis(CGPoint point, CGFloat value, BCAxis axis);
