@@ -2,4 +2,8 @@
 //  Copyright (c) 2015 Bohemian Coding. All rights reserved.
 
 #import "BCGeometry.h"
-#import "BCAxis.h"
+#import "BCRectGeometry.h"
+#import "BCPointGeometry.h"
+#import "BCSizeGeometry.h"
+#import "BCCornerGeometry.h"
+#import "BCLineGeometry.h"

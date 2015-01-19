@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F521FF0C1A6D015E00C0BCEC /* BCPointGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF0A1A6D015E00C0BCEC /* BCPointGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F521FF0D1A6D015E00C0BCEC /* BCPointGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F521FF0B1A6D015E00C0BCEC /* BCPointGeometry.m */; };
+		F521FF101A6D016600C0BCEC /* BCRectGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF0E1A6D016600C0BCEC /* BCRectGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F521FF111A6D016600C0BCEC /* BCRectGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F521FF0F1A6D016600C0BCEC /* BCRectGeometry.m */; };
+		F521FF141A6D047900C0BCEC /* BCSizeGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF121A6D047900C0BCEC /* BCSizeGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F521FF151A6D047900C0BCEC /* BCSizeGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F521FF131A6D047900C0BCEC /* BCSizeGeometry.m */; };
+		F521FF181A6D08A000C0BCEC /* BCCornerGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF161A6D08A000C0BCEC /* BCCornerGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F521FF191A6D08A000C0BCEC /* BCCornerGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F521FF171A6D08A000C0BCEC /* BCCornerGeometry.m */; };
+		F521FF1C1A6D0E9600C0BCEC /* BCLineGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF1A1A6D0E9600C0BCEC /* BCLineGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F521FF1D1A6D0E9600C0BCEC /* BCLineGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F521FF1B1A6D0E9600C0BCEC /* BCLineGeometry.m */; };
 		F53200701A681E9100094228 /* BCGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F532006E1A681E9100094228 /* BCGeometry.m */; };
 		F53200711A681E9100094228 /* BCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F532006F1A681E9100094228 /* BCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F53200831A693F7B00094228 /* BCAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = F53200811A693F7B00094228 /* BCAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F53200841A693F7B00094228 /* BCAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = F53200821A693F7B00094228 /* BCAxis.m */; };
 		F57721F01A67F64900839649 /* libBCFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57721E51A67F64900839649 /* libBCFoundation.a */; };
 		F57721FD1A67F70100839649 /* BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F57721FC1A67F6F100839649 /* BCFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F577220C1A67FF1200839649 /* BCFoundationTestsShared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F57722091A67FF1200839649 /* BCFoundationTestsShared.xcconfig */; };
@@ -48,10 +56,18 @@
 		22E0C15518BCD5BC006ED6C6 /* BCIOSDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSDebug.xcconfig; sourceTree = "<group>"; };
 		22E0C15618BCD5BC006ED6C6 /* BCIOSRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSRelease.xcconfig; sourceTree = "<group>"; };
 		22E0C15718BCD5BC006ED6C6 /* BCIOSShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSShared.xcconfig; sourceTree = "<group>"; };
+		F521FF0A1A6D015E00C0BCEC /* BCPointGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPointGeometry.h; sourceTree = "<group>"; };
+		F521FF0B1A6D015E00C0BCEC /* BCPointGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPointGeometry.m; sourceTree = "<group>"; };
+		F521FF0E1A6D016600C0BCEC /* BCRectGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRectGeometry.h; sourceTree = "<group>"; };
+		F521FF0F1A6D016600C0BCEC /* BCRectGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRectGeometry.m; sourceTree = "<group>"; };
+		F521FF121A6D047900C0BCEC /* BCSizeGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSizeGeometry.h; sourceTree = "<group>"; };
+		F521FF131A6D047900C0BCEC /* BCSizeGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSizeGeometry.m; sourceTree = "<group>"; };
+		F521FF161A6D08A000C0BCEC /* BCCornerGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCornerGeometry.h; sourceTree = "<group>"; };
+		F521FF171A6D08A000C0BCEC /* BCCornerGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCornerGeometry.m; sourceTree = "<group>"; };
+		F521FF1A1A6D0E9600C0BCEC /* BCLineGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLineGeometry.h; sourceTree = "<group>"; };
+		F521FF1B1A6D0E9600C0BCEC /* BCLineGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLineGeometry.m; sourceTree = "<group>"; };
 		F532006E1A681E9100094228 /* BCGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCGeometry.m; path = ../BCGeometry.m; sourceTree = "<group>"; };
 		F532006F1A681E9100094228 /* BCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCGeometry.h; path = ../BCGeometry.h; sourceTree = "<group>"; };
-		F53200811A693F7B00094228 /* BCAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAxis.h; sourceTree = "<group>"; };
-		F53200821A693F7B00094228 /* BCAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAxis.m; sourceTree = "<group>"; };
 		F57721E51A67F64900839649 /* libBCFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBCFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57721EF1A67F64900839649 /* BCFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57721F51A67F64900839649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,8 +137,16 @@
 			children = (
 				F532006F1A681E9100094228 /* BCGeometry.h */,
 				F532006E1A681E9100094228 /* BCGeometry.m */,
-				F53200811A693F7B00094228 /* BCAxis.h */,
-				F53200821A693F7B00094228 /* BCAxis.m */,
+				F521FF0A1A6D015E00C0BCEC /* BCPointGeometry.h */,
+				F521FF0B1A6D015E00C0BCEC /* BCPointGeometry.m */,
+				F521FF0E1A6D016600C0BCEC /* BCRectGeometry.h */,
+				F521FF0F1A6D016600C0BCEC /* BCRectGeometry.m */,
+				F521FF121A6D047900C0BCEC /* BCSizeGeometry.h */,
+				F521FF131A6D047900C0BCEC /* BCSizeGeometry.m */,
+				F521FF161A6D08A000C0BCEC /* BCCornerGeometry.h */,
+				F521FF171A6D08A000C0BCEC /* BCCornerGeometry.m */,
+				F521FF1A1A6D0E9600C0BCEC /* BCLineGeometry.h */,
+				F521FF1B1A6D0E9600C0BCEC /* BCLineGeometry.m */,
 				F577220F1A67FF1800839649 /* Configs */,
 			);
 			path = Source;
@@ -195,8 +219,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F53200831A693F7B00094228 /* BCAxis.h in Headers */,
+				F521FF1C1A6D0E9600C0BCEC /* BCLineGeometry.h in Headers */,
+				F521FF141A6D047900C0BCEC /* BCSizeGeometry.h in Headers */,
+				F521FF101A6D016600C0BCEC /* BCRectGeometry.h in Headers */,
 				F57721FD1A67F70100839649 /* BCFoundation.h in Headers */,
+				F521FF181A6D08A000C0BCEC /* BCCornerGeometry.h in Headers */,
+				F521FF0C1A6D015E00C0BCEC /* BCPointGeometry.h in Headers */,
 				F53200711A681E9100094228 /* BCGeometry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53200701A681E9100094228 /* BCGeometry.m in Sources */,
-				F53200841A693F7B00094228 /* BCAxis.m in Sources */,
+				F521FF191A6D08A000C0BCEC /* BCCornerGeometry.m in Sources */,
+				F521FF151A6D047900C0BCEC /* BCSizeGeometry.m in Sources */,
+				F521FF111A6D016600C0BCEC /* BCRectGeometry.m in Sources */,
+				F521FF1D1A6D0E9600C0BCEC /* BCLineGeometry.m in Sources */,
+				F521FF0D1A6D015E00C0BCEC /* BCPointGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
