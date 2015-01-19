@@ -5,14 +5,14 @@
 #import "BCRectGeometry.h"
 #import "BCLineGeometry.h"
 
-CGFloat GKPointPositionForAxis(CGPoint point, BCAxis axis) {
+CGFloat BCPointPositionForAxis(CGPoint point, BCAxis axis) {
   if (axis == BCAxisHorizontal)
     return point.x;
   else
     return point.y;
 }
 
-CGPoint GKPointWithPositionForAxis(CGPoint point, CGFloat value, BCAxis axis) {
+CGPoint BCPointWithPositionForAxis(CGPoint point, CGFloat value, BCAxis axis) {
   if (axis == BCAxisHorizontal)
     point.x = value;
   else
@@ -118,8 +118,8 @@ CGPoint BCPointSnapToPointWithMargin(CGPoint me, CGPoint other, CGFloat margin) 
 
 CGPoint BCPointSnapToRectWithMargin(CGPoint point, CGRect rect, CGFloat margin) {
   CGPoint __block result = point;
-  GKCornerEnumerate(^(GKCorner corner) {
-    result = BCPointSnapToPointWithMargin(result, GKRectPointForCorner(rect, corner), margin);
+  BCCornerEnumerate(^(BCCorner corner) {
+    result = BCPointSnapToPointWithMargin(result, BCRectPointForCorner(rect, corner), margin);
   });
   return result;
 }
@@ -127,12 +127,12 @@ CGPoint BCPointSnapToRectWithMargin(CGPoint point, CGRect rect, CGFloat margin) 
 CGPoint BCPointSnapToLinesWithMargin(CGPoint point, NSArray *lines, CGFloat margin) {
   BCAxis axis = BCAxisFlip([(BCLineObject*)[lines firstObject] axis]);
   
-  CGFloat position = GKPointPositionForAxis(point, axis);
+  CGFloat position = BCPointPositionForAxis(point, axis);
   NSArray *sortedLines = GKLineSortByDistanceToValue(lines, position);
   BCLineObject *line = [sortedLines firstObject];
   
   if (ABS(position - line.position) < margin)
-    point = GKPointWithPositionForAxis(point, line.position, axis);
+    point = BCPointWithPositionForAxis(point, line.position, axis);
   
   return point;
 }

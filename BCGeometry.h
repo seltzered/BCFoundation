@@ -12,12 +12,16 @@ typedef NS_ENUM(NSUInteger , BCAxis) {
 BCAxis BCAxisFlip(BCAxis axis);
 
 #pragma mark - Edge
-typedef enum GKEdgeType : NSUInteger {
-  GKEdgeLeftMask          = 1,
-  GKEdgeRightMask         = 2,
-  GKEdgeTopMask           = 4,
-  GKEdgeBottomMask        = 8,
-} GKEdgeType;
+typedef NS_ENUM(NSUInteger, BCEdge) {
+  BCEdgeLeft   = 1<<0,
+  BCEdgeRight  = 1<<1,
+  BCEdgeTop    = 1<<2,
+  BCEdgeBottom = 1<<3,
+  BCEdgeMidX   = 1<<4,
+  BCEdgeMidY   = 1<<5,
+  
+  BCEdgeAll = BCEdgeLeft | BCEdgeRight | BCEdgeTop | BCEdgeBottom | BCEdgeMidX | BCEdgeMidY
+};
 
 #pragma mark - Line
 typedef struct _BCLine {
@@ -53,3 +57,5 @@ CGPoint BCPointSafe(CGPoint point);
 CGRect BCRectSafe(CGRect rect);
 CGFloat BCFloatMakeNotInfOrNan(CGFloat value);
 CGFloat BCFloatValidValue(CGFloat value);
+
+CGSize BCSizeScale(CGSize s, CGFloat scale);

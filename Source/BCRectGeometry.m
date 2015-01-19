@@ -121,19 +121,19 @@ CGRect BCUnionRectSafe(CGRect r1, CGRect r2) {
   return r;
 }
 
-CGFloat GKRectMinForAxis(CGRect rect, BCAxis axis) {
+CGFloat BCRectMinForAxis(CGRect rect, BCAxis axis) {
   return axis == BCAxisHorizontal ? rect.origin.x : rect.origin.y;
 }
 
-CGFloat GKRectMaxForAxis(CGRect rect, BCAxis axis) {
+CGFloat BCRectMaxForAxis(CGRect rect, BCAxis axis) {
   return axis == BCAxisHorizontal ? NSMaxX(rect) : NSMaxY(rect);
 }
 
-CGFloat GKRectSizeForAxis(CGRect rect, BCAxis axis) {
+CGFloat BCRectSizeForAxis(CGRect rect, BCAxis axis) {
   return axis == BCAxisHorizontal ? rect.size.width : rect.size.height;
 }
 
-CGRect GKRectWithSizeForAxis(CGRect rect, CGFloat value, BCAxis axis) {
+CGRect BCRectWithSizeForAxis(CGRect rect, CGFloat value, BCAxis axis) {
   if (axis == BCAxisHorizontal)
     rect.size.width = value;
   else
@@ -141,7 +141,7 @@ CGRect GKRectWithSizeForAxis(CGRect rect, CGFloat value, BCAxis axis) {
   return rect;
 }
 
-CGRect GKRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis) {
+CGRect BCRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis) {
   if (axis == BCAxisHorizontal)
     rect.origin.x = value;
   else
@@ -149,7 +149,7 @@ CGRect GKRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis) {
   return rect;
 }
 
-CGRect GKRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis) {
+CGRect BCRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis) {
   if (axis == BCAxisHorizontal)
     rect.origin.x = value - rect.size.width;
   else
@@ -161,74 +161,74 @@ CGPoint BCRectGetMid(CGRect rect) {
   return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
 }
 
-CGRect GKRectWithMidX(CGRect rect, CGFloat midX) {
+CGRect BCRectWithMidX(CGRect rect, CGFloat midX) {
   rect.origin.x = midX - rect.size.width/2;
   return rect;
 }
 
-CGRect GKRectWithMidY(CGRect rect, CGFloat midY) {
+CGRect BCRectWithMidY(CGRect rect, CGFloat midY) {
   rect.origin.y = midY - rect.size.height/2;
   return rect;
 }
 
-CGRect GKRectResizeMinXTo(CGRect rect, CGFloat minX) {
+CGRect BCRectResizeMinXTo(CGRect rect, CGFloat minX) {
   rect.size.width = CGRectGetMaxX(rect) - minX;
   rect.origin.x = minX;
   return rect;
 }
 
-CGRect GKRectResizeMaxXTo(CGRect rect, CGFloat maxX) {
+CGRect BCRectResizeMaxXTo(CGRect rect, CGFloat maxX) {
   rect.size.width = maxX - rect.origin.x;
   return rect;
 }
 
-CGRect GKRectResizeMinYTo(CGRect rect, CGFloat minY) {
+CGRect BCRectResizeMinYTo(CGRect rect, CGFloat minY) {
   rect.size.height = CGRectGetMaxY(rect) - minY;
   rect.origin.y = minY;
   return rect;
 }
 
-CGRect GKRectResizeMaxYTo(CGRect rect, CGFloat maxY) {
+CGRect BCRectResizeMaxYTo(CGRect rect, CGFloat maxY) {
   rect.size.height = maxY - rect.origin.y;
   return rect;
 }
 
-CGRect GKRectResizeByPuttingCorner(CGRect rect, GKCorner corner, CGPoint point) {
+CGRect BCRectResizeByPuttingCorner(CGRect rect, BCCorner corner, CGPoint point) {
   switch (corner) {
-    case GKCornerTopLeft: {
-      rect = GKRectResizeMinXTo(rect, point.x);
-      rect = GKRectResizeMinYTo(rect, point.y);
+    case BCCornerTopLeft: {
+      rect = BCRectResizeMinXTo(rect, point.x);
+      rect = BCRectResizeMinYTo(rect, point.y);
       break;
     }
-    case GKCornerTopRight: {
-      rect = GKRectResizeMaxXTo(rect, point.x);
-      rect = GKRectResizeMinYTo(rect, point.y);
+    case BCCornerTopRight: {
+      rect = BCRectResizeMaxXTo(rect, point.x);
+      rect = BCRectResizeMinYTo(rect, point.y);
       break;
     }
-    case GKCornerBottomLeft: {
-      rect = GKRectResizeMinXTo(rect, point.x);
-      rect = GKRectResizeMaxYTo(rect, point.y);
+    case BCCornerBottomLeft: {
+      rect = BCRectResizeMinXTo(rect, point.x);
+      rect = BCRectResizeMaxYTo(rect, point.y);
       break;
     }
-    case GKCornerBottomRight: {
-      rect = GKRectResizeMaxXTo(rect, point.x);
-      rect = GKRectResizeMaxYTo(rect, point.y);
+    case BCCornerBottomRight: {
+      rect = BCRectResizeMaxXTo(rect, point.x);
+      rect = BCRectResizeMaxYTo(rect, point.y);
       break;
     }
-    case GKCornerMidTop: {
-      rect = GKRectResizeMinYTo(rect, point.y);
+    case BCCornerMidTop: {
+      rect = BCRectResizeMinYTo(rect, point.y);
       break;
     }
-    case GKCornerMidLeft: {
-      rect = GKRectResizeMinXTo(rect, point.x);
+    case BCCornerMidLeft: {
+      rect = BCRectResizeMinXTo(rect, point.x);
       break;
     }
-    case GKCornerMidRight: {
-      rect = GKRectResizeMaxXTo(rect, point.x);
+    case BCCornerMidRight: {
+      rect = BCRectResizeMaxXTo(rect, point.x);
       break;
     }
-    case GKCornerMidBottom: {
-      rect = GKRectResizeMaxYTo(rect, point.y);
+    case BCCornerMidBottom: {
+      rect = BCRectResizeMaxYTo(rect, point.y);
       break;
     }
     default:
@@ -237,41 +237,41 @@ CGRect GKRectResizeByPuttingCorner(CGRect rect, GKCorner corner, CGPoint point) 
   return rect;
 }
 
-CGRect GKRectMoveToCorner(CGRect rect, GKCorner corner, CGPoint point) {
+CGRect BCRectMoveToCorner(CGRect rect, BCCorner corner, CGPoint point) {
   switch (corner) {
-    case GKCornerTopLeft:
+    case BCCornerTopLeft:
       rect.origin.x = point.x;
       rect.origin.y = point.y;
       break;
-    case GKCornerTopRight:
+    case BCCornerTopRight:
       rect.origin.x  = point.x-rect.size.width;
       rect.origin.y = point.y;
       break;
-    case GKCornerBottomLeft:
+    case BCCornerBottomLeft:
       rect.origin.x  = point.x;
       rect.origin.y = point.y-rect.size.height;
       break;
-    case GKCornerBottomRight:
+    case BCCornerBottomRight:
       rect.origin.x  = point.x-rect.size.width;
       rect.origin.y = point.y-rect.size.height;
       break;
-    case GKCornerMidTop:
+    case BCCornerMidTop:
       rect.origin.x  = point.x-rect.size.width/2.0;
       rect.origin.y = point.y;
       break;
-    case GKCornerMidLeft:
+    case BCCornerMidLeft:
       rect.origin.x  = point.x;
       rect.origin.y = point.y-rect.size.height/2.0;
       break;
-    case GKCornerMidRight:
+    case BCCornerMidRight:
       rect.origin.x  = point.x-rect.size.width;
       rect.origin.y = point.y-rect.size.height/2;
       break;
-    case GKCornerMidBottom:
+    case BCCornerMidBottom:
       rect.origin.x  = point.x-rect.size.width/2.0;
       rect.origin.y = point.y-rect.size.height;
       break;
-    case GKCornerMid:
+    case BCCornerMid:
       rect.origin.x  = point.x-rect.size.width/2.0;
       rect.origin.y = point.y-rect.size.height/2.0;
     default:
@@ -280,53 +280,53 @@ CGRect GKRectMoveToCorner(CGRect rect, GKCorner corner, CGPoint point) {
   return rect;
 }
 
-CGPoint GKRectPointForCorner(CGRect rect, GKCorner corner) {
+CGPoint BCRectPointForCorner(CGRect rect, BCCorner corner) {
   switch (corner) {
-    case GKCornerTopLeft:
+    case BCCornerTopLeft:
       return NSMakePoint(NSMinX(rect), NSMinY(rect));
-    case GKCornerTopRight:
+    case BCCornerTopRight:
       return NSMakePoint(NSMaxX(rect), NSMinY(rect));
-    case GKCornerBottomLeft:
+    case BCCornerBottomLeft:
       return NSMakePoint(NSMinX(rect), NSMaxY(rect));
-    case GKCornerBottomRight:
+    case BCCornerBottomRight:
       return NSMakePoint(NSMaxX(rect), NSMaxY(rect));
-    case GKCornerMidTop:
+    case BCCornerMidTop:
       return NSMakePoint(NSMidX(rect), NSMinY(rect));
-    case GKCornerMidLeft:
+    case BCCornerMidLeft:
       return NSMakePoint(NSMinX(rect), NSMidY(rect));
-    case GKCornerMidRight:
+    case BCCornerMidRight:
       return NSMakePoint(NSMaxX(rect), NSMidY(rect));
-    case GKCornerMidBottom:
+    case BCCornerMidBottom:
       return NSMakePoint(NSMidX(rect), NSMaxY(rect));
-    case GKCornerMid:
+    case BCCornerMid:
       return NSMakePoint(NSMidX(rect), NSMidY(rect));
     default:
       return NSZeroPoint;
   }
 }
 
-GKCorner GKRectClosestCornerForPoint(CGRect rect, CGPoint point, CGFloat margin, NSUInteger cornerMask) {
-  return GKCornerFirstCornerSatisfyingPredicate(^BOOL(GKCorner corner) {
-    return GKCornerSatisfiesMask(corner, cornerMask) && BCDistanceBetweenPoints(GKRectPointForCorner(rect, corner), point) < margin;
+BCCorner BCRectClosestCornerForPoint(CGRect rect, CGPoint point, CGFloat margin, NSUInteger cornerMask) {
+  return BCCornerFirstCornerSatisfyingPredicate(^BOOL(BCCorner corner) {
+    return BCCornerSatisfiesMask(corner, cornerMask) && BCDistanceBetweenPoints(BCRectPointForCorner(rect, corner), point) < margin;
   });
 }
 
-CGSize GKRectDistanceFromCornerToMid(CGRect rect, GKCorner corner) {
-  CGPoint cornerPoint = GKRectPointForCorner(rect, corner);
-  CGPoint mid = GKRectPointForCorner(rect, GKCornerMid);
+CGSize BCRectDistanceFromCornerToMid(CGRect rect, BCCorner corner) {
+  CGPoint cornerPoint = BCRectPointForCorner(rect, corner);
+  CGPoint mid = BCRectPointForCorner(rect, BCCornerMid);
   return CGSizeMake(mid.x-cornerPoint.x, mid.y-cornerPoint.y);
 }
 
-NSComparisonResult GKRectCompare(CGRect rect1, CGRect rect2, BCAxis axis) {
-  CGFloat a = GKRectMinForAxis(rect1, axis);
-  CGFloat b = GKRectMinForAxis(rect2, axis);
+NSComparisonResult BCRectCompare(CGRect rect1, CGRect rect2, BCAxis axis) {
+  CGFloat a = BCRectMinForAxis(rect1, axis);
+  CGFloat b = BCRectMinForAxis(rect2, axis);
   
   if (a > b) return NSOrderedDescending;
   if (a < b) return NSOrderedAscending;
   else return NSOrderedSame;
 }
 
-CGFloat GKRectValueForKey(CGRect rect, NSString *key) {
+CGFloat BCRectValueForKey(CGRect rect, NSString *key) {
   if ([key isEqualToString:@"minX"])
     return CGRectGetMinX(rect);
   else if ([key isEqualToString:@"midX"])
@@ -344,7 +344,7 @@ CGFloat GKRectValueForKey(CGRect rect, NSString *key) {
     return 0;
 }
 
-CGRect GKRectNormalise(CGRect rect) {
+CGRect BCRectNormalise(CGRect rect) {
   return CGRectMake(CGRectGetMinX(rect),
                     CGRectGetMinY(rect),
                     ABS(rect.size.width),

@@ -4,6 +4,5 @@
 #import "BCGeometry.h"
 #import "BCRectGeometry.h"
 #import "BCPointGeometry.h"
-#import "BCSizeGeometry.h"
 #import "BCCornerGeometry.h"
 #import "BCLineGeometry.h"

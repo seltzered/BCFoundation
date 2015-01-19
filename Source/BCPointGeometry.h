@@ -3,8 +3,8 @@
 
 #import "BCGeometry.h"
 
-CGFloat GKPointPositionForAxis(CGPoint point, BCAxis axis);
-CGPoint GKPointWithPositionForAxis(CGPoint point, CGFloat value, BCAxis axis);
+CGFloat BCPointPositionForAxis(CGPoint point, BCAxis axis);
+CGPoint BCPointWithPositionForAxis(CGPoint point, CGFloat value, BCAxis axis);
 
 CGPoint BCPointRelative(CGPoint p, CGRect outer);
 CGPoint BCPointAbsolute(CGPoint point, CGRect outer);

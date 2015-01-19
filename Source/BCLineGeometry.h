@@ -22,8 +22,8 @@ static inline BOOL GKLineSnapToPosition(BCLine line, CGFloat pos, CGFloat margin
 
 static inline BOOL GKLineSnapsToRect(BCLine line, CGRect rect, CGFloat margin, CGFloat *snapped) {
   BCAxis axis = BCAxisFlip(line.axis);
-  CGFloat min = GKRectMinForAxis(rect, axis);
-  CGFloat max = GKRectMaxForAxis(rect, axis);
+  CGFloat min = BCRectMinForAxis(rect, axis);
+  CGFloat max = BCRectMaxForAxis(rect, axis);
   if (GKLineSnapToPosition(line, min, margin, snapped))
     return YES;
   else if (GKLineSnapToPosition(line, max, margin, snapped))

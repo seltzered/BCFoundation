@@ -125,3 +125,9 @@ CGFloat BCRadiansToDegrees(CGFloat radians)  {
 CGFloat BCDegreesToRadians(CGFloat degrees)  {
   return degrees / (180.0 / M_PI);
 }
+
+CGSize BCSizeScale(CGSize s, CGFloat scale) {
+  s.width  *= scale;
+  s.height *= scale;
+  return s;
+}

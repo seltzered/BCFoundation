@@ -4,26 +4,26 @@
 #import "BCCornerGeometry.h"
 
 
-void GKCornerEnumerate(GKCornerEnumeratorBlock block) {
-  for (NSInteger corner = 0; corner<GKCornerCount; corner++)
-    block((GKCorner)corner);
+void BCCornerEnumerate(BCCornerEnumeratorBlock block) {
+  for (NSInteger corner = 0; corner<BCCornerCount; corner++)
+    block((BCCorner)corner);
 }
 
-GKCorner BCCornerByRotating45DegreesCounterClockwise(GKCorner corner) {
+BCCorner BCCornerByRotating45DegreesCounterClockwise(BCCorner corner) {
   switch (corner) {
-    case GKCornerTopLeft:     return GKCornerMidLeft;
-    case GKCornerTopRight:    return GKCornerMidTop;
-    case GKCornerBottomLeft:  return GKCornerMidBottom;
-    case GKCornerBottomRight: return GKCornerMidRight;
-    case GKCornerMidTop:      return GKCornerTopLeft;
-    case GKCornerMidLeft:     return GKCornerBottomLeft;
-    case GKCornerMidRight:    return GKCornerTopRight;
-    case GKCornerMidBottom:   return GKCornerBottomRight;
-    default:                  return GKCornerMid;
+    case BCCornerTopLeft:     return BCCornerMidLeft;
+    case BCCornerTopRight:    return BCCornerMidTop;
+    case BCCornerBottomLeft:  return BCCornerMidBottom;
+    case BCCornerBottomRight: return BCCornerMidRight;
+    case BCCornerMidTop:      return BCCornerTopLeft;
+    case BCCornerMidLeft:     return BCCornerBottomLeft;
+    case BCCornerMidRight:    return BCCornerTopRight;
+    case BCCornerMidBottom:   return BCCornerBottomRight;
+    default:                  return BCCornerMid;
   }
 }
 
-GKCorner BCCornerByRotatingByDegrees(GKCorner corner, CGFloat degrees) {
+BCCorner BCCornerByRotatingByDegrees(BCCorner corner, CGFloat degrees) {
   if (degrees < 45.0/2 && degrees > -45.0/2)
     return corner;
   else {
@@ -35,61 +35,61 @@ GKCorner BCCornerByRotatingByDegrees(GKCorner corner, CGFloat degrees) {
   }
 }
 
-GKCorner GKCornerFlip(GKCorner corner) {
+BCCorner BCCornerFlip(BCCorner corner) {
   NSUInteger number = corner;
-  if (number < GKCornerMidTop)
-    number = GKCornerBottomRight - number;
+  if (number < BCCornerMidTop)
+    number = BCCornerBottomRight - number;
   else
     number = 11- number;
   
-  return (GKCorner) number;
+  return (BCCorner) number;
 }
 
-BOOL GKCornerSatisfiesMask(GKCorner corner, NSUInteger mask) {
+BOOL BCCornerSatisfiesMask(BCCorner corner, NSUInteger mask) {
   NSUInteger shifted = (NSUInteger) (1 << (NSUInteger)corner);
   return (mask & shifted) == shifted;
 }
 
-BOOL GKCornerIsInMidHorizontal(GKCorner corner) {
-  return corner == GKCornerMidLeft || corner == GKCornerMidRight;
+BOOL BCCornerIsInMidHorizontal(BCCorner corner) {
+  return corner == BCCornerMidLeft || corner == BCCornerMidRight;
 }
 
-BOOL GKCornerIsInMidVertical(GKCorner corner) {
-  return corner == GKCornerMidTop || corner == GKCornerMidBottom;
+BOOL BCCornerIsInMidVertical(BCCorner corner) {
+  return corner == BCCornerMidTop || corner == BCCornerMidBottom;
 }
 
-GKCorner GKCornerFlipByAxis(GKCorner corner, BCAxis axis) {
+BCCorner BCCornerFlipByAxis(BCCorner corner, BCAxis axis) {
   if (axis == BCAxisHorizontal) {
     switch (corner) {
-      case GKCornerTopLeft:
-        return GKCornerTopRight;
-      case GKCornerTopRight:
-        return GKCornerTopLeft;
-      case GKCornerBottomLeft:
-        return GKCornerBottomRight;
-      case GKCornerBottomRight:
-        return GKCornerBottomLeft;
-      case GKCornerMidLeft:
-        return GKCornerMidRight;
-      case GKCornerMidRight:
-        return GKCornerMidLeft;
+      case BCCornerTopLeft:
+        return BCCornerTopRight;
+      case BCCornerTopRight:
+        return BCCornerTopLeft;
+      case BCCornerBottomLeft:
+        return BCCornerBottomRight;
+      case BCCornerBottomRight:
+        return BCCornerBottomLeft;
+      case BCCornerMidLeft:
+        return BCCornerMidRight;
+      case BCCornerMidRight:
+        return BCCornerMidLeft;
       default:
         break;
     }
   } else {
     switch (corner) {
-      case GKCornerTopLeft:
-        return GKCornerBottomLeft;
-      case GKCornerTopRight:
-        return GKCornerBottomRight;
-      case GKCornerBottomLeft:
-        return GKCornerTopLeft;
-      case GKCornerBottomRight:
-        return GKCornerTopRight;
-      case GKCornerMidTop:
-        return GKCornerMidBottom;
-      case GKCornerMidBottom:
-        return GKCornerMidTop;
+      case BCCornerTopLeft:
+        return BCCornerBottomLeft;
+      case BCCornerTopRight:
+        return BCCornerBottomRight;
+      case BCCornerBottomLeft:
+        return BCCornerTopLeft;
+      case BCCornerBottomRight:
+        return BCCornerTopRight;
+      case BCCornerMidTop:
+        return BCCornerMidBottom;
+      case BCCornerMidBottom:
+        return BCCornerMidTop;
       default:
         break;
     }
@@ -97,34 +97,33 @@ GKCorner GKCornerFlipByAxis(GKCorner corner, BCAxis axis) {
   return corner;
 }
 
-NSUInteger GKCornerRectEdgesMask(GKCorner type) {
+NSUInteger BCCornerRectEdgesMask(BCCorner type) {
   switch (type) {
-    case GKCornerTopLeft:
-      return GKEdgeTopMask | GKEdgeLeftMask;
-    case GKCornerMidTop:
-      return GKEdgeTopMask;
-    case GKCornerTopRight:
-      return GKEdgeTopMask | GKEdgeRightMask;
-    case GKCornerMidLeft:
-      return GKEdgeLeftMask;
-    case GKCornerMidRight:
-      return GKEdgeRightMask;
-    case GKCornerBottomLeft:
-      return GKEdgeBottomMask | GKEdgeLeftMask;
-    case GKCornerMidBottom:
-      return GKEdgeBottomMask;
-    case GKCornerBottomRight:
-      return GKEdgeBottomMask | GKEdgeRightMask;
+    case BCCornerTopLeft:
+      return BCEdgeTop | BCEdgeLeft;
+    case BCCornerMidTop:
+      return BCEdgeTop;
+    case BCCornerTopRight:
+      return BCEdgeTop | BCEdgeRight;
+    case BCCornerMidLeft:
+      return BCEdgeLeft;
+    case BCCornerMidRight:
+      return BCEdgeRight;
+    case BCCornerBottomLeft:
+      return BCEdgeBottom | BCEdgeLeft;
+    case BCCornerMidBottom:
+      return BCEdgeBottom;
+    case BCCornerBottomRight:
+      return BCEdgeBottom | BCEdgeRight;
     default:
       return 0;
   }
 }
 
-
-GKCorner GKCornerFirstCornerSatisfyingPredicate(GKCornerEnumeratorPredicate block) {
-  for (NSInteger corner = 0; corner<GKCornerCount; corner++) {
-    if (block((GKCorner)corner))
-      return (GKCorner)corner;
+BCCorner BCCornerFirstCornerSatisfyingPredicate(BCCornerEnumeratorPredicate block) {
+  for (NSInteger corner = 0; corner<BCCornerCount; corner++) {
+    if (block((BCCorner)corner))
+      return (BCCorner)corner;
   }
-  return GKCornerNone;
+  return BCCornerNone;
 }

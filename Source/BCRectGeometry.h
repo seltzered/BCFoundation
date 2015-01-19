@@ -25,30 +25,30 @@ CGRect BCUnionRectSafe(CGRect r1, CGRect r2);
 BOOL BCRectFuzzyEqualToRect(CGRect rect1, CGRect rect2);
 BOOL BCRectIsZero(CGRect rect);
 
-CGFloat GKRectMinForAxis(CGRect rect, BCAxis axis);
-CGFloat GKRectMaxForAxis(CGRect rect, BCAxis axis);
-CGFloat GKRectSizeForAxis(CGRect rect, BCAxis axis);
+CGFloat BCRectMinForAxis(CGRect rect, BCAxis axis);
+CGFloat BCRectMaxForAxis(CGRect rect, BCAxis axis);
+CGFloat BCRectSizeForAxis(CGRect rect, BCAxis axis);
 
-CGRect GKRectWithSizeForAxis(CGRect rect, CGFloat value, BCAxis axis);
-CGRect GKRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis);
-CGRect GKRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis);
+CGRect BCRectWithSizeForAxis(CGRect rect, CGFloat value, BCAxis axis);
+CGRect BCRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis);
+CGRect BCRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis);
 
 CGPoint BCRectGetMid(CGRect rect);
-CGRect GKRectWithMidX(CGRect rect, CGFloat midX);
-CGRect GKRectWithMidY(CGRect rect, CGFloat midY);
+CGRect BCRectWithMidX(CGRect rect, CGFloat midX);
+CGRect BCRectWithMidY(CGRect rect, CGFloat midY);
 
-CGRect GKRectResizeMinXTo(CGRect rect, CGFloat minX);
-CGRect GKRectResizeMaxXTo(CGRect rect, CGFloat maxX);
-CGRect GKRectResizeMinYTo(CGRect rect, CGFloat minY);
-CGRect GKRectResizeMaxYTo(CGRect rect, CGFloat maxY);
-CGRect GKRectResizeByPuttingCorner(CGRect rect, GKCorner corner, CGPoint point);
-CGRect GKRectMoveToCorner(CGRect rect, GKCorner corner, CGPoint point);
+CGRect BCRectResizeMinXTo(CGRect rect, CGFloat minX);
+CGRect BCRectResizeMaxXTo(CGRect rect, CGFloat maxX);
+CGRect BCRectResizeMinYTo(CGRect rect, CGFloat minY);
+CGRect BCRectResizeMaxYTo(CGRect rect, CGFloat maxY);
+CGRect BCRectResizeByPuttingCorner(CGRect rect, BCCorner corner, CGPoint point);
+CGRect BCRectMoveToCorner(CGRect rect, BCCorner corner, CGPoint point);
 
-CGPoint GKRectPointForCorner(CGRect rect, GKCorner corner);
-GKCorner GKRectClosestCornerForPoint(CGRect rect, CGPoint point, CGFloat margin, NSUInteger cornerMask);
-CGSize GKRectDistanceFromCornerToMid(CGRect rect, GKCorner corner);
+CGPoint BCRectPointForCorner(CGRect rect, BCCorner corner);
+BCCorner BCRectClosestCornerForPoint(CGRect rect, CGPoint point, CGFloat margin, NSUInteger cornerMask);
+CGSize BCRectDistanceFromCornerToMid(CGRect rect, BCCorner corner);
 
-NSComparisonResult GKRectCompare(CGRect rect1, CGRect rect2, BCAxis axis);
+NSComparisonResult BCRectCompare(CGRect rect1, CGRect rect2, BCAxis axis);
 
-CGFloat GKRectValueForKey(CGRect rect, NSString *key);
-CGRect GKRectNormalise(CGRect rect);
+CGFloat BCRectValueForKey(CGRect rect, NSString *key);
+CGRect BCRectNormalise(CGRect rect);
