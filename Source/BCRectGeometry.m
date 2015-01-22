@@ -350,3 +350,57 @@ CGRect BCRectNormalise(CGRect rect) {
                     ABS(rect.size.width),
                     ABS(rect.size.height));
 }
+
+CGRect BCRectWithSizeOnAxisAspectRatio(CGRect rect, CGFloat size, BCAxis axis, CGFloat aspectRatio) {
+  if (axis == BCAxisVertical) {
+    rect.size.width = aspectRatio != 0 ? size * aspectRatio : rect.size.width;
+    rect.size.height = size;
+  } else {
+    rect.size.width = size;
+    rect.size.height = aspectRatio != 0 ? size / aspectRatio : rect.size.height;
+  }
+  return rect;
+}
+
+CGRect BCRectMoveCornerToPoint(CGRect rect, BCCorner corner, CGPoint point) {
+  switch (corner) {
+    case BCCornerTopLeft:
+      rect.origin.x = point.x;
+      rect.origin.y = point.y;
+      break;
+    case BCCornerTopRight:
+      rect.origin.x = point.x-rect.size.width;
+      rect.origin.y = point.y;
+      break;
+    case BCCornerBottomLeft:
+      rect.origin.x = point.x;
+      rect.origin.y = point.y-rect.size.height;
+      break;
+    case BCCornerBottomRight:
+      rect.origin.x = point.x-rect.size.width;
+      rect.origin.y = point.y-rect.size.height;
+      break;
+    case BCCornerMidTop:
+      rect.origin.x = point.x-rect.size.width/2.0;
+      rect.origin.y = point.y;
+      break;
+    case BCCornerMidLeft:
+      rect.origin.x = point.x;
+      rect.origin.y = point.y-rect.size.height/2.0;
+      break;
+    case BCCornerMidRight:
+      rect.origin.x = point.x-rect.size.width;
+      rect.origin.y = point.y-rect.size.height/2;
+      break;
+    case BCCornerMidBottom:
+      rect.origin.x = point.x-rect.size.width/2.0;
+      rect.origin.y = point.y-rect.size.height;
+      break;
+    case BCCornerMid:
+      rect.origin.x = point.x-rect.size.width/2.0;
+      rect.origin.y = point.y-rect.size.height/2.0;
+    default:
+      break;
+  }
+  return rect;
+}

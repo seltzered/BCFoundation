@@ -343,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F57722061A67FF0400839649 /* BCFoundationDebug.xcconfig */;
 			buildSettings = {
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -350,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F57722071A67FF0400839649 /* BCFoundationRelease.xcconfig */;
 			buildSettings = {
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};

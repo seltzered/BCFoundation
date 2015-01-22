@@ -52,3 +52,5 @@ NSComparisonResult BCRectCompare(CGRect rect1, CGRect rect2, BCAxis axis);
 
 CGFloat BCRectValueForKey(CGRect rect, NSString *key);
 CGRect BCRectNormalise(CGRect rect);
+CGRect BCRectWithSizeOnAxisAspectRatio(CGRect rect, CGFloat size, BCAxis axis, CGFloat aspectRatio);
+CGRect BCRectMoveCornerToPoint(CGRect rect, BCCorner corner, CGPoint point);
