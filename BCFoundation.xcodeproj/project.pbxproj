@@ -19,9 +19,6 @@
 		F53200711A681E9100094228 /* BCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F532006F1A681E9100094228 /* BCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F57721F01A67F64900839649 /* libBCFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57721E51A67F64900839649 /* libBCFoundation.a */; };
 		F57721FD1A67F70100839649 /* BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F57721FC1A67F6F100839649 /* BCFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F577220C1A67FF1200839649 /* BCFoundationTestsShared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F57722091A67FF1200839649 /* BCFoundationTestsShared.xcconfig */; };
-		F577220D1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F577220A1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig */; };
-		F577220E1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F577220B1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,7 +263,7 @@
 		F5C25A8016A46702002F7A70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Bohemian Coding";
 				TargetAttributes = {
 					F57721E41A67F64900839649 = {
@@ -300,9 +297,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F577220E1A67FF1200839649 /* BCFoundationTestsRelease.xcconfig in Resources */,
-				F577220D1A67FF1200839649 /* BCFoundationTestsDebug.xcconfig in Resources */,
-				F577220C1A67FF1200839649 /* BCFoundationTestsShared.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
