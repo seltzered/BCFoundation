@@ -263,7 +263,7 @@
 		F5C25A8016A46702002F7A70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Bohemian Coding";
 				TargetAttributes = {
 					F57721E41A67F64900839649 = {
