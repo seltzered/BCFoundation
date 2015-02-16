@@ -131,3 +131,9 @@ CGSize BCSizeScale(CGSize s, CGFloat scale) {
   s.height *= scale;
   return s;
 }
+
+#pragma mark - Ranges
+
+BOOL BCRangeContainsRange(NSRange outerRange, NSRange innerRange) {
+  return NSEqualRanges(outerRange, NSUnionRange(outerRange, innerRange));
+}

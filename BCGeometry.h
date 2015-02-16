@@ -59,3 +59,6 @@ CGFloat BCFloatMakeNotInfOrNan(CGFloat value);
 CGFloat BCFloatValidValue(CGFloat value);
 
 CGSize BCSizeScale(CGSize s, CGFloat scale);
+
+#pragma mark - Ranges
+BOOL BCRangeContainsRange(NSRange outerRange, NSRange innerRange);
