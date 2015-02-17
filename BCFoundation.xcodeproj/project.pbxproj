@@ -12,7 +12,7 @@
 		5BC722E21A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722E11A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m */; };
 		5BC722E41A9360AA00AC86F5 /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC722E31A9360AA00AC86F5 /* ECUnitTests.framework */; };
 		5BC722E61A9360BD00AC86F5 /* libECLogging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC722E51A9360BD00AC86F5 /* libECLogging.a */; };
-		5BC722E91A936C0200AC86F5 /* BCVersionComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC722E71A936C0100AC86F5 /* BCVersionComparison.h */; };
+		5BC722E91A936C0200AC86F5 /* BCVersionComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC722E71A936C0100AC86F5 /* BCVersionComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC722EA1A936C0200AC86F5 /* BCVersionComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722E81A936C0200AC86F5 /* BCVersionComparison.m */; };
 		5BC722EC1A936C8000AC86F5 /* VersionComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722EB1A936C8000AC86F5 /* VersionComparisonTests.m */; };
 		F521FF0C1A6D015E00C0BCEC /* BCPointGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF0A1A6D015E00C0BCEC /* BCPointGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };

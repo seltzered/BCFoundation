@@ -6,3 +6,4 @@
 #import "BCPointGeometry.h"
 #import "BCCornerGeometry.h"
 #import "BCLineGeometry.h"
+#import "BCVersionComparison.h"
