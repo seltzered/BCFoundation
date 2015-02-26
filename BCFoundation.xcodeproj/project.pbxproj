@@ -11,6 +11,7 @@
 		2207CAC11A9F2BDA007FB727 /* BCLocalizedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207CABF1A9F2BD7007FB727 /* BCLocalizedTests.m */; };
 		2207CAC51A9F33A2007FB727 /* BCLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207CAC41A9F33A2007FB727 /* BCLocalizedString.m */; };
 		2207CAC61A9F3538007FB727 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2207CAC81A9F3538007FB727 /* Localizable.strings */; };
+		2207CACB1A9F4D37007FB727 /* MoreLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2207CAC91A9F4D37007FB727 /* MoreLocalizable.strings */; };
 		5BC722DF1A935F5100AC86F5 /* NSDictionary+BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */; };
 		5BC722E01A935F5100AC86F5 /* NSDictionary+BCFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722DE1A935F5100AC86F5 /* NSDictionary+BCFoundation.m */; };
 		5BC722E21A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722E11A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m */; };
@@ -63,6 +64,7 @@
 		2207CABF1A9F2BD7007FB727 /* BCLocalizedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLocalizedTests.m; sourceTree = "<group>"; };
 		2207CAC41A9F33A2007FB727 /* BCLocalizedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLocalizedString.m; sourceTree = SOURCE_ROOT; };
 		2207CAC71A9F3538007FB727 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2207CACA1A9F4D37007FB727 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MoreLocalizable.strings; sourceTree = "<group>"; };
 		22B6B97E19827AEC00FF2D41 /* BCXPC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCXPC.xcconfig; sourceTree = "<group>"; };
 		22E0C15518BCD5BC006ED6C6 /* BCIOSDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSDebug.xcconfig; sourceTree = "<group>"; };
 		22E0C15618BCD5BC006ED6C6 /* BCIOSRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSRelease.xcconfig; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				F57722101A67FF3600839649 /* Configs */,
 				F57721F51A67F64900839649 /* Info.plist */,
 				2207CAC81A9F3538007FB727 /* Localizable.strings */,
+				2207CAC91A9F4D37007FB727 /* MoreLocalizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2207CACB1A9F4D37007FB727 /* MoreLocalizable.strings in Resources */,
 				2207CAC61A9F3538007FB727 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +392,14 @@
 				2207CAC71A9F3538007FB727 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2207CAC91A9F4D37007FB727 /* MoreLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2207CACA1A9F4D37007FB727 /* en */,
+			);
+			name = MoreLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

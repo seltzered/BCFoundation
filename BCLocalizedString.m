@@ -22,11 +22,15 @@
 @end
 
 NSString* BCLocalizedString(NSString* key) {
+  return BCLocalizedStringFromTable(key, nil);
+}
+
+NSString* BCLocalizedStringFromTable(NSString* key, NSString* table) {
   static NSBundle* bundleForTranslations = nil;
   if (!bundleForTranslations)
     bundleForTranslations = [BCLocalizedStringHelper bundleForTranslations];
   
-  NSString* result = [bundleForTranslations localizedStringForKey:key value:@"" table:nil];
+  NSString* result = [bundleForTranslations localizedStringForKey:key value:@"" table:table];
   
   return result;
 }

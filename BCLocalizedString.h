@@ -14,3 +14,11 @@
  */
 
 extern NSString* BCLocalizedString(NSString* key);
+
+/**
+ 
+ A replacement for NSLocalizedStringFromTable - see NSLocalizedString above for details of the differences between our version and the system one.
+ 
+ */
+
+extern NSString* BCLocalizedStringFromTable(NSString* key, NSString* from);

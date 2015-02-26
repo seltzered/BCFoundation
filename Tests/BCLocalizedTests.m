@@ -20,6 +20,11 @@
   ECTestAssertStringIsEqual(test, @"value");
 }
 
+- (void)testOtherTable {
+  NSString* test = BCLocalizedStringFromTable(@"test.key", @"MoreLocalizable");
+  ECTestAssertStringIsEqual(test, @"another value");
+}
+
 - (void)testMissing {
   NSString* test = BCLocalizedString(@"missing");
   ECTestAssertStringIsEqual(test, @"missing");
