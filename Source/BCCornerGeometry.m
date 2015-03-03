@@ -24,7 +24,7 @@ BCCorner BCCornerByRotating45DegreesCounterClockwise(BCCorner corner) {
 }
 
 BCCorner BCCornerByRotatingByDegrees(BCCorner corner, CGFloat degrees) {
-  if (degrees < 45.0/2 && degrees > -45.0/2)
+  if (degrees < ceil(45.0/2) && degrees > -ceil(45.0/2))
     return corner;
   else {
     corner = BCCornerByRotating45DegreesCounterClockwise(corner);
