@@ -34,6 +34,8 @@ CGRect BCRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis);
 CGRect BCRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis);
 
 CGPoint BCRectGetMid(CGRect rect);
+CGRect BCRectWithMid(CGRect rect, CGPoint point);
+
 CGRect BCRectWithMidX(CGRect rect, CGFloat midX);
 CGRect BCRectWithMidY(CGRect rect, CGFloat midY);
 

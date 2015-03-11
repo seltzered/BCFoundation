@@ -161,6 +161,10 @@ CGPoint BCRectGetMid(CGRect rect) {
   return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
 }
 
+CGRect BCRectWithMid(CGRect rect, CGPoint point) {
+  return BCRectWithSizeSizeCenteredAtPoint(rect.size, point);
+}
+
 CGRect BCRectWithMidX(CGRect rect, CGFloat midX) {
   rect.origin.x = midX - rect.size.width/2;
   return rect;
