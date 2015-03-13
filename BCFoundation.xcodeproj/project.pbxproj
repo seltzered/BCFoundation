@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2207CABE1A9F2AFD007FB727 /* BCLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2207CABD1A9F2AFD007FB727 /* BCLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2207CAC11A9F2BDA007FB727 /* BCLocalizedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207CABF1A9F2BD7007FB727 /* BCLocalizedTests.m */; };
+		2207CAC51A9F33A2007FB727 /* BCLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207CAC41A9F33A2007FB727 /* BCLocalizedString.m */; };
+		2207CAC61A9F3538007FB727 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2207CAC81A9F3538007FB727 /* Localizable.strings */; };
+		2207CACB1A9F4D37007FB727 /* MoreLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2207CAC91A9F4D37007FB727 /* MoreLocalizable.strings */; };
 		5BC722DF1A935F5100AC86F5 /* NSDictionary+BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */; };
 		5BC722E01A935F5100AC86F5 /* NSDictionary+BCFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722DE1A935F5100AC86F5 /* NSDictionary+BCFoundation.m */; };
 		5BC722E21A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722E11A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m */; };
@@ -55,6 +60,11 @@
 		22073C1F18476FEE001DBAF9 /* BCTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCTests.xcconfig; sourceTree = "<group>"; };
 		22073C2018476FEE001DBAF9 /* BCTestsDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCTestsDebug.xcconfig; sourceTree = "<group>"; };
 		22073C2118476FEE001DBAF9 /* BCTestsRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCTestsRelease.xcconfig; sourceTree = "<group>"; };
+		2207CABD1A9F2AFD007FB727 /* BCLocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLocalizedString.h; sourceTree = SOURCE_ROOT; };
+		2207CABF1A9F2BD7007FB727 /* BCLocalizedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLocalizedTests.m; sourceTree = "<group>"; };
+		2207CAC41A9F33A2007FB727 /* BCLocalizedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLocalizedString.m; sourceTree = SOURCE_ROOT; };
+		2207CAC71A9F3538007FB727 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2207CACA1A9F4D37007FB727 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MoreLocalizable.strings; sourceTree = "<group>"; };
 		22B6B97E19827AEC00FF2D41 /* BCXPC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCXPC.xcconfig; sourceTree = "<group>"; };
 		22E0C15518BCD5BC006ED6C6 /* BCIOSDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSDebug.xcconfig; sourceTree = "<group>"; };
 		22E0C15618BCD5BC006ED6C6 /* BCIOSRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BCIOSRelease.xcconfig; sourceTree = "<group>"; };
@@ -146,20 +156,22 @@
 		F57721E61A67F64900839649 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F521FF161A6D08A000C0BCEC /* BCCornerGeometry.h */,
+				F521FF171A6D08A000C0BCEC /* BCCornerGeometry.m */,
 				F532006F1A681E9100094228 /* BCGeometry.h */,
 				F532006E1A681E9100094228 /* BCGeometry.m */,
+				F521FF1A1A6D0E9600C0BCEC /* BCLineGeometry.h */,
+				F521FF1B1A6D0E9600C0BCEC /* BCLineGeometry.m */,
+				2207CABD1A9F2AFD007FB727 /* BCLocalizedString.h */,
+				2207CAC41A9F33A2007FB727 /* BCLocalizedString.m */,
 				F521FF0A1A6D015E00C0BCEC /* BCPointGeometry.h */,
 				F521FF0B1A6D015E00C0BCEC /* BCPointGeometry.m */,
 				F521FF0E1A6D016600C0BCEC /* BCRectGeometry.h */,
 				F521FF0F1A6D016600C0BCEC /* BCRectGeometry.m */,
-				F521FF161A6D08A000C0BCEC /* BCCornerGeometry.h */,
-				F521FF171A6D08A000C0BCEC /* BCCornerGeometry.m */,
-				F521FF1A1A6D0E9600C0BCEC /* BCLineGeometry.h */,
-				F521FF1B1A6D0E9600C0BCEC /* BCLineGeometry.m */,
-				5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */,
-				5BC722DE1A935F5100AC86F5 /* NSDictionary+BCFoundation.m */,
 				5BC722E71A936C0100AC86F5 /* BCVersionComparison.h */,
 				5BC722E81A936C0200AC86F5 /* BCVersionComparison.m */,
+				5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */,
+				5BC722DE1A935F5100AC86F5 /* NSDictionary+BCFoundation.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -167,6 +179,7 @@
 		F57721F31A67F64900839649 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2207CABF1A9F2BD7007FB727 /* BCLocalizedTests.m */,
 				5BC722E11A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m */,
 				5BC722EB1A936C8000AC86F5 /* VersionComparisonTests.m */,
 				F57721F41A67F64900839649 /* Supporting Files */,
@@ -179,6 +192,8 @@
 			children = (
 				F57722101A67FF3600839649 /* Configs */,
 				F57721F51A67F64900839649 /* Info.plist */,
+				2207CAC81A9F3538007FB727 /* Localizable.strings */,
+				2207CAC91A9F4D37007FB727 /* MoreLocalizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,6 +257,7 @@
 				5BC722DF1A935F5100AC86F5 /* NSDictionary+BCFoundation.h in Headers */,
 				F521FF101A6D016600C0BCEC /* BCRectGeometry.h in Headers */,
 				F57721FD1A67F70100839649 /* BCFoundation.h in Headers */,
+				2207CABE1A9F2AFD007FB727 /* BCLocalizedString.h in Headers */,
 				F521FF181A6D08A000C0BCEC /* BCCornerGeometry.h in Headers */,
 				F521FF0C1A6D015E00C0BCEC /* BCPointGeometry.h in Headers */,
 				F53200711A681E9100094228 /* BCGeometry.h in Headers */,
@@ -326,6 +342,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2207CACB1A9F4D37007FB727 /* MoreLocalizable.strings in Resources */,
+				2207CAC61A9F3538007FB727 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53200701A681E9100094228 /* BCGeometry.m in Sources */,
+				2207CAC51A9F33A2007FB727 /* BCLocalizedString.m in Sources */,
 				F521FF191A6D08A000C0BCEC /* BCCornerGeometry.m in Sources */,
 				F521FF111A6D016600C0BCEC /* BCRectGeometry.m in Sources */,
 				F521FF1D1A6D0E9600C0BCEC /* BCLineGeometry.m in Sources */,
@@ -350,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2207CAC11A9F2BDA007FB727 /* BCLocalizedTests.m in Sources */,
 				5BC722E21A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m in Sources */,
 				5BC722EC1A936C8000AC86F5 /* VersionComparisonTests.m in Sources */,
 			);
@@ -364,6 +384,25 @@
 			targetProxy = F57721F11A67F64900839649 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2207CAC81A9F3538007FB727 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2207CAC71A9F3538007FB727 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2207CAC91A9F4D37007FB727 /* MoreLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2207CACA1A9F4D37007FB727 /* en */,
+			);
+			name = MoreLocalizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F57721F61A67F64900839649 /* Debug */ = {
