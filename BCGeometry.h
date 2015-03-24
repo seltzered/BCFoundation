@@ -36,7 +36,6 @@ void BCLogPoint(CGPoint point);
 
 #pragma mark - Rounding
 CGRect BCRectByRoundingRect(CGRect rect);
-CGRect BCRectByExpandingToIntegralRect(CGRect rect);
 CGSize BCSizeByRoundingSize(CGSize size);
 CGPoint BCPointByRoundingPoint(CGPoint point);
 CGPoint BCPointByRoundingPointToStep(CGPoint point, CGFloat step);

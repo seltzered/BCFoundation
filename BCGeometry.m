@@ -28,15 +28,6 @@ CGRect BCRectByRoundingRect(CGRect rect) {
   return CGRectMake(round(rect.origin.x), round(rect.origin.y), round(rect.size.width), round(rect.size.height));
 }
 
-CGRect BCRectByExpandingToIntegralRect(CGRect rect)
-{
-  CGFloat newMinX = floor(CGRectGetMinX(rect));
-  CGFloat newMinY = floor(CGRectGetMinY(rect));
-  CGFloat newMaxX = ceil(CGRectGetMaxX(rect));
-  CGFloat newMaxY = ceil(CGRectGetMaxY(rect));
-  return CGRectMake(newMinX, newMinY, newMaxX-newMinX, newMaxY-newMinY);
-}
-
 CGSize BCSizeByRoundingSize(CGSize size) {
   return CGSizeMake(round(size.width), round(size.height));
 }
