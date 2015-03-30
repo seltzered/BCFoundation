@@ -27,6 +27,8 @@
                                    @"array": array,
                                    @"dictionary": dictionary,
                                    @"number": number,
+                                   @"zero": @(0),
+                                   @"boolean": @YES,
                                    @"url": [url absoluteString]
                                    };
   
@@ -50,6 +52,11 @@
     ECTestAssertIsEqual([d numberForKey_BC:@"number"], number);
     ECTestAssertNil([d numberForKey_BC:@"no_key"]);
     ECTestAssertNil([d numberForKey_BC:@"string"]);
+    
+    ECTestAssertTrue([d boolForKey_BC:@"boolean"]);
+    ECTestAssertTrue([d boolForKey_BC:@"number"]);
+    ECTestAssertFalse([d boolForKey_BC:@"zero"]);
+    ECTestAssertFalse([d boolForKey_BC:@"no_key"]);
     
     ECTestAssertNotNil([d urlForKey_BC:@"url"]);
     ECTestAssertIsEqual([d urlForKey_BC:@"url"], url);

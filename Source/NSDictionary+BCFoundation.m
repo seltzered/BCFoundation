@@ -27,6 +27,10 @@
   TypeForKey(NSNumber)
 }
 
+- (BOOL)boolForKey_BC:(id)aKey {
+  return [[self numberForKey_BC:aKey] boolValue];
+}
+
 - (NSURL *)urlForKey_BC:(id)key {
   NSString *string = [self stringForKey_BC:key];
   NSURL *url = nil;
