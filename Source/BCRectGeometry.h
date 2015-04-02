@@ -11,7 +11,7 @@ CGRect BCRectWithOriginAndSize(CGPoint point, CGSize size);
 CGRect BCRectWithSizeProportionallyAroundRect(NSSize size, CGRect rect);
 CGRect BCRectWithMarginAroundPoint(CGFloat margin, CGPoint point);
 
-CGRect BCRectWithSizeSizeCenteredAtPoint(CGSize size, CGPoint point);
+CGRect BCRectWithSizeCenteredAtPoint(CGSize size, CGPoint point);
 CGRect BCRectFromCoordinateSpaceRectToRect(CGRect rect, CGRect fromRect, CGRect toRect);
 
 CGRect BCRectExpand(CGRect rect, CGFloat margin);
@@ -34,6 +34,8 @@ CGRect BCRectWithMinForAxis(CGRect rect, CGFloat value, BCAxis axis);
 CGRect BCRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis);
 
 CGPoint BCRectGetMid(CGRect rect);
+CGRect BCRectWithMid(CGRect rect, CGPoint point);
+
 CGRect BCRectWithMidX(CGRect rect, CGFloat midX);
 CGRect BCRectWithMidY(CGRect rect, CGFloat midY);
 
