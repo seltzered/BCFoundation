@@ -8,3 +8,4 @@
 #import "BCPointGeometry.h"
 #import "BCRectGeometry.h"
 #import "BCVersionComparison.h"
+#import "NSDictionary+BCFoundation.h"
