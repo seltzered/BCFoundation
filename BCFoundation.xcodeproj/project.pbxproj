@@ -20,6 +20,8 @@
 		5BC722E91A936C0200AC86F5 /* BCVersionComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC722E71A936C0100AC86F5 /* BCVersionComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC722EA1A936C0200AC86F5 /* BCVersionComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722E81A936C0200AC86F5 /* BCVersionComparison.m */; };
 		5BC722EC1A936C8000AC86F5 /* VersionComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722EB1A936C8000AC86F5 /* VersionComparisonTests.m */; };
+		F50B5E0A1AD65A9900369A86 /* BCPrimitiveFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = F50B5E081AD65A9900369A86 /* BCPrimitiveFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F50B5E0B1AD65A9900369A86 /* BCPrimitiveFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F50B5E091AD65A9900369A86 /* BCPrimitiveFunctions.m */; };
 		F521FF0C1A6D015E00C0BCEC /* BCPointGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF0A1A6D015E00C0BCEC /* BCPointGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F521FF0D1A6D015E00C0BCEC /* BCPointGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F521FF0B1A6D015E00C0BCEC /* BCPointGeometry.m */; };
 		F521FF101A6D016600C0BCEC /* BCRectGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F521FF0E1A6D016600C0BCEC /* BCRectGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,11 +74,13 @@
 		5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BCFoundation.h"; sourceTree = "<group>"; };
 		5BC722DE1A935F5100AC86F5 /* NSDictionary+BCFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BCFoundation.m"; sourceTree = "<group>"; };
 		5BC722E11A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryBCFoundationTests.m; sourceTree = "<group>"; };
-		5BC722E31A9360AA00AC86F5 /* ECUnitTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ECUnitTests.framework; path = ../ECLogging/build/Debug/ECUnitTests.framework; sourceTree = "<group>"; };
-		5BC722E51A9360BD00AC86F5 /* libECLogging.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECLogging.a; path = "../../../../../Library/Developer/Xcode/DerivedData/Sketch-gznhamfbxurivtfsoccvzfgmvuvm/Build/Products/Debug/libECLogging.a"; sourceTree = "<group>"; };
+		5BC722E31A9360AA00AC86F5 /* ECUnitTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ECUnitTests.framework; path = ../../ECLogging/build/Debug/ECUnitTests.framework; sourceTree = "<group>"; };
+		5BC722E51A9360BD00AC86F5 /* libECLogging.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECLogging.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/Sketch-gznhamfbxurivtfsoccvzfgmvuvm/Build/Products/Debug/libECLogging.a"; sourceTree = "<group>"; };
 		5BC722E71A936C0100AC86F5 /* BCVersionComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCVersionComparison.h; sourceTree = "<group>"; };
 		5BC722E81A936C0200AC86F5 /* BCVersionComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCVersionComparison.m; sourceTree = "<group>"; };
 		5BC722EB1A936C8000AC86F5 /* VersionComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionComparisonTests.m; sourceTree = "<group>"; };
+		F50B5E081AD65A9900369A86 /* BCPrimitiveFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPrimitiveFunctions.h; sourceTree = "<group>"; };
+		F50B5E091AD65A9900369A86 /* BCPrimitiveFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPrimitiveFunctions.m; sourceTree = "<group>"; };
 		F521FF0A1A6D015E00C0BCEC /* BCPointGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPointGeometry.h; sourceTree = "<group>"; };
 		F521FF0B1A6D015E00C0BCEC /* BCPointGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPointGeometry.m; sourceTree = "<group>"; };
 		F521FF0E1A6D016600C0BCEC /* BCRectGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRectGeometry.h; sourceTree = "<group>"; };
@@ -153,6 +157,16 @@
 			path = Prefixes;
 			sourceTree = SOURCE_ROOT;
 		};
+		F50B5E071AD659E600369A86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BC722E51A9360BD00AC86F5 /* libECLogging.a */,
+				5BC722E31A9360AA00AC86F5 /* ECUnitTests.framework */,
+			);
+			name = Frameworks;
+			path = Source;
+			sourceTree = "<group>";
+		};
 		F57721E61A67F64900839649 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +186,8 @@
 				5BC722E81A936C0200AC86F5 /* BCVersionComparison.m */,
 				5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */,
 				5BC722DE1A935F5100AC86F5 /* NSDictionary+BCFoundation.m */,
+				F50B5E081AD65A9900369A86 /* BCPrimitiveFunctions.h */,
+				F50B5E091AD65A9900369A86 /* BCPrimitiveFunctions.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -222,10 +238,9 @@
 		F5C25A7E16A46702002F7A70 = {
 			isa = PBXGroup;
 			children = (
-				5BC722E51A9360BD00AC86F5 /* libECLogging.a */,
-				5BC722E31A9360AA00AC86F5 /* ECUnitTests.framework */,
 				F57721FC1A67F6F100839649 /* BCFoundation.h */,
 				F57721E61A67F64900839649 /* Source */,
+				F50B5E071AD659E600369A86 /* Frameworks */,
 				F577220F1A67FF1800839649 /* Configs */,
 				F57721F31A67F64900839649 /* Tests */,
 				22073BE718476195001DBAF9 /* Configs */,
@@ -261,6 +276,7 @@
 				F521FF181A6D08A000C0BCEC /* BCCornerGeometry.h in Headers */,
 				F521FF0C1A6D015E00C0BCEC /* BCPointGeometry.h in Headers */,
 				F53200711A681E9100094228 /* BCGeometry.h in Headers */,
+				F50B5E0A1AD65A9900369A86 /* BCPrimitiveFunctions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +378,7 @@
 				5BC722EA1A936C0200AC86F5 /* BCVersionComparison.m in Sources */,
 				5BC722E01A935F5100AC86F5 /* NSDictionary+BCFoundation.m in Sources */,
 				F521FF0D1A6D015E00C0BCEC /* BCPointGeometry.m in Sources */,
+				F50B5E0B1AD65A9900369A86 /* BCPrimitiveFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
