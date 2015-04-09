@@ -9,3 +9,4 @@
 #import "BCRectGeometry.h"
 #import "BCVersionComparison.h"
 #import "BCPrimitiveFunctions.h"
+#import "NSDictionary+BCFoundation.h"

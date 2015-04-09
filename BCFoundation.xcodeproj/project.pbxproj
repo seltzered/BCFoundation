@@ -12,7 +12,7 @@
 		2207CAC51A9F33A2007FB727 /* BCLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207CAC41A9F33A2007FB727 /* BCLocalizedString.m */; };
 		2207CAC61A9F3538007FB727 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2207CAC81A9F3538007FB727 /* Localizable.strings */; };
 		2207CACB1A9F4D37007FB727 /* MoreLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2207CAC91A9F4D37007FB727 /* MoreLocalizable.strings */; };
-		5BC722DF1A935F5100AC86F5 /* NSDictionary+BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */; };
+		5BC722DF1A935F5100AC86F5 /* NSDictionary+BCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC722DD1A935F5100AC86F5 /* NSDictionary+BCFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC722E01A935F5100AC86F5 /* NSDictionary+BCFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722DE1A935F5100AC86F5 /* NSDictionary+BCFoundation.m */; };
 		5BC722E21A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC722E11A93602E00AC86F5 /* NSDictionaryBCFoundationTests.m */; };
 		5BC722E41A9360AA00AC86F5 /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC722E31A9360AA00AC86F5 /* ECUnitTests.framework */; };
