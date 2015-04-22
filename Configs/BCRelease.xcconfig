@@ -38,10 +38,6 @@ GCC_PRECOMPILE_PREFIX_HEADER = YES
 // (I think we probably don't need these anymore)
 ZERO_LINK = NO
 
-// Static analyser
-
-RUN_CLANG_STATIC_ANALYZER = YES
-
 // Warnings - don't worry about documentation warnings in release
 
 CLANG_WARN_DOCUMENTATION_COMMENTS = NO
