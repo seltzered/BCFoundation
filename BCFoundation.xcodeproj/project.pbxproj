@@ -124,7 +124,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22073BE718476195001DBAF9 /* Configs */ = {
+		22073BE718476195001DBAF9 /* Shared Configs */ = {
 			isa = PBXGroup;
 			children = (
 				22073BE818476195001DBAF9 /* BCAppStore.xcconfig */,
@@ -141,6 +141,7 @@
 				22073C2118476FEE001DBAF9 /* BCTestsRelease.xcconfig */,
 				22B6B97E19827AEC00FF2D41 /* BCXPC.xcconfig */,
 			);
+			name = "Shared Configs";
 			path = Configs;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -220,6 +221,7 @@
 				F57722061A67FF0400839649 /* BCFoundationDebug.xcconfig */,
 				F57722071A67FF0400839649 /* BCFoundationRelease.xcconfig */,
 				F57722081A67FF0400839649 /* BCFoundationShared.xcconfig */,
+				22073BE718476195001DBAF9 /* Shared Configs */,
 			);
 			name = Configs;
 			path = Source;
@@ -243,7 +245,6 @@
 				F50B5E071AD659E600369A86 /* Frameworks */,
 				F577220F1A67FF1800839649 /* Configs */,
 				F57721F31A67F64900839649 /* Tests */,
-				22073BE718476195001DBAF9 /* Configs */,
 				22073BEF18476195001DBAF9 /* Prefixes */,
 				F5C25A8A16A46702002F7A70 /* Products */,
 			);
