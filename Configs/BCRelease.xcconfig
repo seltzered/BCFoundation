@@ -16,7 +16,6 @@ DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 
 
 // Linking
-
 DEAD_CODE_STRIPPING = YES
 
 
