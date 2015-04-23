@@ -1,6 +1,4 @@
 #include "../Configs/BCStaticLibrary.xcconfig"
 
 PRODUCT_NAME=$(TARGET_NAME)
-DEFINES_MODULE = YES
 GCC_PREFIX_HEADER =
-DEAD_CODE_STRIPPING = NO

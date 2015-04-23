@@ -427,7 +427,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F57722061A67FF0400839649 /* BCFoundationDebug.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = NO;
 			};
 			name = Debug;
 		};
@@ -435,8 +434,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F57722071A67FF0400839649 /* BCFoundationRelease.xcconfig */;
 			buildSettings = {
-				DEAD_CODE_STRIPPING = YES;
-				DEFINES_MODULE = NO;
 			};
 			name = Release;
 		};
