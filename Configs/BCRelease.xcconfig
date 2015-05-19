@@ -16,7 +16,6 @@ DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 
 
 // Linking
-
 DEAD_CODE_STRIPPING = YES
 
 
@@ -37,10 +36,6 @@ GCC_PRECOMPILE_PREFIX_HEADER = YES
 // Legacy
 // (I think we probably don't need these anymore)
 ZERO_LINK = NO
-
-// Static analyser
-
-RUN_CLANG_STATIC_ANALYZER = YES
 
 // Warnings - don't worry about documentation warnings in release
 

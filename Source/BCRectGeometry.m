@@ -51,7 +51,7 @@ CGRect BCRectWithMarginAroundPoint(CGFloat margin, CGPoint point) {
   return CGRectMake(point.x - margin, point.y - margin, margin * 2, margin * 2);
 }
 
-CGRect BCRectWithSizeSizeCenteredAtPoint(CGSize size, CGPoint point) {
+CGRect BCRectWithSizeCenteredAtPoint(CGSize size, CGPoint point) {
   return CGRectMake(point.x - size.width/2, point.y - size.height/2, size.width, size.height);
 }
 
@@ -159,6 +159,10 @@ CGRect BCRectWithMaxForAxis(CGRect rect, CGFloat value, BCAxis axis) {
 
 CGPoint BCRectGetMid(CGRect rect) {
   return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+}
+
+CGRect BCRectWithMid(CGRect rect, CGPoint point) {
+  return BCRectWithSizeCenteredAtPoint(rect.size, point);
 }
 
 CGRect BCRectWithMidX(CGRect rect, CGFloat midX) {

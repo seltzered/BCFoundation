@@ -4,3 +4,5 @@
 
 #include "BCRelease.xcconfig"
 #include "BCTests.xcconfig"
+
+DEAD_CODE_STRIPPING = NO // TODO: remove this - stripping is temporarily disabled to work around what seems to be an XC6.3 bug with LTO.

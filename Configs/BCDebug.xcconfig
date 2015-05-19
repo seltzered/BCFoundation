@@ -7,7 +7,6 @@
 // Debug only settings for all targets
 
 DEPLOYMENT_POSTPROCESSING = NO
-DEAD_CODE_STRIPPING = NO
 
 
 // Build options
@@ -29,8 +28,8 @@ STRIP_INSTALLED_PRODUCT = NO
 
 // Linking
 
-DEAD_CODE_STRIPPING = NO
 GCC_SYMBOLS_PRIVATE_EXTERN = NO
+DEAD_CODE_STRIPPING = NO
 
 // Code Generation
 
